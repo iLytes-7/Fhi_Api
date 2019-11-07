@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.integral.IntegralMapper">
+	
+	<!--表名 -->
+	<sql id="tableName">
+		wx_applet_integral
+	</sql>
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.integral.IntegralBean" >
+		<id column="INTEGRAL_ID" property="integralId"  />
+		<result column="AMOUNT" property="amount"  />
+		<result column="TOP_UP_INTEGRAL" property="topUpIntegral"  />
+		<result column="PRESENT_INTEGRAL" property="presentIntegral"  />
+		<result column="OPEN_ID" property="openId"  />
+		<result column="CREATE_TIME" property="createTime"  />
+		<result column="AGENT" property="agent"  />
+		<result column="REMARK" property="remark"  />
+	</resultMap>
+
+	<select id="getIntegralList" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+			t.INTEGRAL_ID,
+			t.AMOUNT,
+			t.TOP_UP_INTEGRAL,
+			t.PRESENT_INTEGRAL,
+			t.OPEN_ID,
+			t.CREATE_TIME,
+			t.AGENT,
+			t.REMARK
+		FROM
+			wx_applet_integral t
+		WHERE
+			t.OPEN_ID = #{openId}
+			AND `STATUS` = '1'
+	</select>
+</mapper>

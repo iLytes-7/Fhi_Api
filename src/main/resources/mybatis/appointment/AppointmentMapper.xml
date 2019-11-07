@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.appointment.AppointmentMapper">
+	
+	<!--表名 -->
+	<sql id="tableName">
+		wx_applet_appointment
+	</sql>
+
+	<sql id="Field">
+		APPOINTMENT_ID,
+		OPEN_ID,
+		APPOINTMENT_DATE,
+		APPOINTMENT_DURATION,
+		CONSULTANT_USER_ID,
+		SERVICE_ID,
+		STATUS,
+		REMARK,
+		IS_AGREE
+	</sql>
+
+	<sql id="FieldValue">
+		#{appointmentId},
+		#{openId},
+		#{appointmentDate},
+		#{appointmentDuration},
+		#{consultantUserId},
+		#{serviceId},
+		#{status},
+		#{remark},
+		#{isagree}
+	</sql>
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.appointment.Appointment" >
+		<id column="APPOINTMENT_ID" property="appointmentId"  />
+		<result column="OPEN_ID" property="openId"  />
+		<result column="APPOINTMENT_DATE" property="appointmentDate"  />
+		<result column="APPOINTMENT_DURATION" property="appointmentDuration"  />
+		<result column="CONSULTANT_NAME" property="consultantName"  />
+		<result column="HEAD_PIC" property="headPic"  />
+		<result column="CONSULTANT_USER_ID" property="consultantUserId"  />
+		<result column="SERVICE_ID" property="serviceId"  />
+		<result column="SERVICE_NAME" property="serviceName"  />
+		<result column="STATUS" property="status"  />
+		<result column="REMARK" property="remark"  />
+		<result column="IS_AGREE" property="isagree"  />
+
+	</resultMap>
+
+	<!-- 新增预约记录-->
+	<insert id="saveAppointment" parameterType="org.fh.api.pojo.appointment.Appointment">
+		insert into
+		<include refid="tableName"></include>
+		(
+		<include refid="Field"></include>
+		) values (
+		<include refid="FieldValue"></include>
+		)
+	</insert>
+
+
+	<update id="updateAppointmentById"  parameterType="org.fh.api.pojo.appointment.Appointment">
+		UPDATE
+		wx_applet_appointment
+		SET
+		STATUS = #{status}
+		WHERE
+		APPOINTMENT_ID = #{appointmentId}
+	</update>
+	<!--根据id查询预约对象-->
+	<select id="getAppointmentById" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+		a.APPOINTMENT_ID,
+		a.OPEN_ID,
+		a.APPOINTMENT_DATE,
+		a.APPOINTMENT_DURATION,
+		d.`NAME` AS CONSULTANT_NAME,
+		a.CONSULTANT_USER_ID,
+		a.SERVICE_ID,
+		c.`NAME` AS SERVICE_NAME,
+		a.`STATUS`,
+		a.REMARK
+		FROM
+		wx_applet_appointment a
+		LEFT JOIN wx_applet_services b ON (a.SERVICE_ID = b.SERVICES_ID)
+		LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+		LEFT JOIN sys_user d ON (d.USER_ID = a.CONSULTANT_USER_ID)
+		WHERE
+		a.APPOINTMENT_ID = #{id}
+	</select>
+
+		<select id="getAllAppointment" parameterType="String" resultMap="BaseResultMap">
+			SELECT
+			a.APPOINTMENT_ID,
+			a.OPEN_ID,
+			a.APPOINTMENT_DATE,
+			a.APPOINTMENT_DURATION,
+			d.`NAME` AS CONSULTANT_NAME,
+			d.HEAD_PIC,
+			a.CONSULTANT_USER_ID,
+			a.SERVICE_ID,
+			c.`NAME` AS SERVICE_NAME,
+			a.`STATUS`,
+			a.REMARK
+			FROM
+			wx_applet_appointment a
+			LEFT JOIN wx_applet_services b ON (a.SERVICE_ID = b.SERVICES_ID)
+			LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+			LEFT JOIN sys_user d ON (d.USER_ID = a.CONSULTANT_USER_ID)
+			WHERE
+			a.OPEN_ID = #{openId}
+			ORDER BY
+			a.CREATE_TIME DESC
+	</select>
+
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.news.NewsMapper">
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.news.News" >
+		<id column="NEWS_ID" property="newsId"  />
+		<result column="NEWS_TITLE" property="newsTitle"  />
+		<result column="RELEASE_DATE" property="releaseDate"  />
+		<result column="BROWSE_TIMES" property="browseTime"  />
+		<result column="SHARE_TIMES" property="shareTimes"  />
+		<result column="NEWS_IMG" property="newsImg"  />
+		<result column="CONTENT" property="content"  />
+	</resultMap>
+
+	<select id="getNewsList"  resultMap="BaseResultMap">
+		SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news
+	</select>
+
+
+    <select id="getNewsById" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+        NEWS_ID,
+        NEWS_TITLE,
+        RELEASE_DATE,
+        BROWSE_TIMES,
+        SHARE_TIMES,
+        NEWS_IMG,
+        CONTENT
+        FROM
+        wx_applet_news
+        WHERE
+        NEWS_ID = #{newsId}
+    </select>
+</mapper>

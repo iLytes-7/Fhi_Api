@@ -1,0 +1,356 @@
+2019-08-16 16:01:59.613 [restartedMain] INFO  org.fh.api.FhiApiApplication - Starting FhiApiApplication on YK219ZAO71X6ZV0 with PID 12176 (C:\Dysprep\svn\bin\svn\fh_api\target\classes started by Administrator in C:\Dysprep\svn\bin\svn\fh_api)
+2019-08-16 16:01:59.616 [restartedMain] INFO  org.fh.api.FhiApiApplication - No active profile set, falling back to default profiles: default
+2019-08-16 16:01:59.708 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-16 16:01:59.709 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-16 16:02:01.324 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-08-16 16:02:01.338 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-16 16:02:01.346 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-16 16:02:01.346 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-08-16 16:02:01.353 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2019-08-16 16:02:01.468 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-16 16:02:01.468 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1758 ms
+2019-08-16 16:02:02.193 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-16 16:02:02.514 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-08-16 16:02:02.543 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-08-16 16:02:02.565 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-16 16:02:02.569 [restartedMain] INFO  org.fh.api.FhiApiApplication - Started FhiApiApplication in 3.349 seconds (JVM running for 5.819)
+2019-08-16 16:02:08.229 [http-nio-8080-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-16 16:02:08.229 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-16 16:02:08.237 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2019-08-16 16:02:08.253 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:08.253 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:08.254 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:08.254 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:08.257 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:2955CC51D8FE94508718EB82C412BE59
+2019-08-16 16:02:08.257 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:8600F680072CC489458385552BC0ED27
+2019-08-16 16:02:08.257 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:36925B29B17356279794043B91084402
+2019-08-16 16:02:08.257 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:4470117B7F80BD8272BF24BCAADAD0FD
+2019-08-16 16:02:08.278 [http-nio-8080-exec-4] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-08-16 16:02:08.278 [http-nio-8080-exec-2] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-08-16 16:02:08.278 [http-nio-8080-exec-1] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-08-16 16:02:08.278 [http-nio-8080-exec-3] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-08-16 16:02:08.296 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:08.297 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:FA85381FDC34650FA3CAF77E09A97D66
+2019-08-16 16:02:08.297 [http-nio-8080-exec-5] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-08-16 16:02:08.311 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:08.312 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:14866E1FE78F7F2BDEE9FBB4EF00A283
+2019-08-16 16:02:08.313 [http-nio-8080-exec-6] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-16 16:02:08.363 [http-nio-8080-exec-5] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-08-16 16:02:11.722 [http-nio-8080-exec-1] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-08-16 16:02:11.766 [http-nio-8080-exec-1] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-08-16 16:02:11.816 [http-nio-8080-exec-1] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-08-16 16:02:11.818 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-16 16:02:11.819 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-08-16 16:02:11.840 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-16 16:02:11.841 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-08-16 16:02:11.842 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-08-16 16:02:11.844 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:11.844 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:11.844 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:11.844 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:11.847 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:11.847 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:11.848 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:11.848 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:60B6CD5EC00B998B30DDFD16DF418F63
+2019-08-16 16:02:11.848 [http-nio-8080-exec-1] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-16 16:02:11.869 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-08-16 16:02:11.870 [http-nio-8080-exec-2] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-08-16 16:02:11.870 [http-nio-8080-exec-2] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-08-16 16:02:11.873 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:11.873 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:11.893 [http-nio-8080-exec-2] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-08-16 16:02:11.894 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-08-16 16:02:11.894 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-08-16 16:02:11.900 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:11.901 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:11.918 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-08-16 16:02:11.918 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-08-16 16:02:11.919 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-08-16 16:02:11.920 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:11.921 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:11.942 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-08-16 16:02:11.943 [http-nio-8080-exec-1] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-16 16:02:11.944 [http-nio-8080-exec-1] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-08-16 16:02:11.945 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:11.946 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:11.964 [http-nio-8080-exec-6] INFO  org.fh.api.controller.user.UserLoginController - 081cxk3h1cpdls0WPT4h1qqv3h1cxk31
+2019-08-16 16:02:11.967 [http-nio-8080-exec-1] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-16 16:02:11.969 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:11.970 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:12.932 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-16 16:02:12.932 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:02:12.961 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-16 16:02:12.961 [http-nio-8080-exec-6] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-16 16:02:12.962 [http-nio-8080-exec-6] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:02:13.015 [http-nio-8080-exec-6] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-16 16:02:13.017 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:13.017 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:14.019 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:14.020 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:14.022 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:14.023 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:14.026 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:14.026 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:14.027 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-16 16:02:14.028 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:02:14.056 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-16 16:02:14.058 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:14.058 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:15.482 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:15.483 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:15.484 [http-nio-8080-exec-10] INFO  org.fh.api.controller.integral.IntegralController - getIntegralList
+2019-08-16 16:02:15.484 [http-nio-8080-exec-10] DEBUG o.f.a.m.integral.IntegralMapper.getIntegralList - ==>  Preparing: SELECT t.INTEGRAL_ID, t.AMOUNT, t.TOP_UP_INTEGRAL, t.PRESENT_INTEGRAL, t.OPEN_ID, t.CREATE_TIME, t.AGENT, t.REMARK FROM wx_applet_integral t WHERE t.OPEN_ID = ? AND `STATUS` = '1' 
+2019-08-16 16:02:15.485 [http-nio-8080-exec-10] DEBUG o.f.a.m.integral.IntegralMapper.getIntegralList - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:02:15.514 [http-nio-8080-exec-10] DEBUG o.f.a.m.integral.IntegralMapper.getIntegralList - <==      Total: 2
+2019-08-16 16:02:15.517 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:15.518 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:17.768 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:17.768 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:17.770 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:17.770 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:17.771 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:17.771 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:17.772 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-16 16:02:17.773 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:02:17.800 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-16 16:02:17.802 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:17.802 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:30.219 [Thread-16] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-16 16:02:30.223 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-08-16 16:02:36.593 [restartedMain] INFO  org.fh.api.FhiApiApplication - Starting FhiApiApplication on YK219ZAO71X6ZV0 with PID 236 (C:\Dysprep\svn\bin\svn\fh_api\target\classes started by Administrator in C:\Dysprep\svn\bin\svn\fh_api)
+2019-08-16 16:02:36.595 [restartedMain] INFO  org.fh.api.FhiApiApplication - No active profile set, falling back to default profiles: default
+2019-08-16 16:02:36.663 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-16 16:02:36.664 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-16 16:02:38.320 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-08-16 16:02:38.334 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-16 16:02:38.341 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-16 16:02:38.341 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-08-16 16:02:38.349 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2019-08-16 16:02:38.458 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-16 16:02:38.458 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1794 ms
+2019-08-16 16:02:39.166 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-16 16:02:39.475 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-08-16 16:02:39.503 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-08-16 16:02:39.529 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-16 16:02:39.533 [restartedMain] INFO  org.fh.api.FhiApiApplication - Started FhiApiApplication in 3.477 seconds (JVM running for 4.475)
+2019-08-16 16:02:44.536 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-16 16:02:44.537 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-16 16:02:44.547 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2019-08-16 16:02:44.565 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:44.565 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:44.565 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:44.565 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:44.567 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:44.567 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:44.581 [http-nio-8080-exec-3] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-08-16 16:02:44.581 [http-nio-8080-exec-2] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-08-16 16:02:44.586 [http-nio-8080-exec-1] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-08-16 16:02:44.606 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:44.607 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:44.608 [http-nio-8080-exec-4] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-08-16 16:02:44.615 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:44.616 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:44.616 [http-nio-8080-exec-5] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-08-16 16:02:44.634 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:44.634 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:44.635 [http-nio-8080-exec-6] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-16 16:02:44.664 [http-nio-8080-exec-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-08-16 16:02:44.949 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-08-16 16:02:44.986 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-08-16 16:02:45.055 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-08-16 16:02:45.057 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-16 16:02:45.057 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-08-16 16:02:45.080 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-16 16:02:45.080 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-08-16 16:02:45.082 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-08-16 16:02:45.083 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:45.083 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:45.083 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:45.084 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:45.088 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:45.088 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:A7A4AAFD7BC5899123697D08A52D6FA9
+2019-08-16 16:02:45.088 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:45.088 [http-nio-8080-exec-6] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-16 16:02:45.092 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:02:45.105 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-08-16 16:02:45.105 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-08-16 16:02:45.106 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-08-16 16:02:45.112 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:45.112 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:45.131 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-08-16 16:02:45.132 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-08-16 16:02:45.132 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-08-16 16:02:45.134 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:45.134 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:45.148 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-08-16 16:02:45.149 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-08-16 16:02:45.155 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-08-16 16:02:45.157 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-16 16:02:45.158 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-08-16 16:02:45.158 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:45.159 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:45.177 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-08-16 16:02:45.180 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:45.180 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:45.184 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-16 16:02:45.186 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:45.187 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:45.219 [http-nio-8080-exec-7] INFO  org.fh.api.controller.user.UserLoginController - 011WC3rS1cZsX51JWjpS1RRYqS1WC3ro
+2019-08-16 16:02:46.049 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-16 16:02:46.049 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:02:46.075 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-16 16:02:46.076 [http-nio-8080-exec-7] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-16 16:02:46.076 [http-nio-8080-exec-7] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), null, null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:02:46.117 [http-nio-8080-exec-7] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-16 16:02:46.118 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:46.119 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:46.688 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:46.689 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:02:46.692 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:46.693 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:46.698 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:46.698 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:02:46.699 [http-nio-8080-exec-9] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-16 16:02:46.699 [http-nio-8080-exec-9] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:02:46.720 [http-nio-8080-exec-9] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-16 16:02:46.723 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:46.723 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:02:48.650 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:02:48.651 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:02:48.652 [http-nio-8080-exec-10] INFO  org.fh.api.controller.integral.IntegralController - getIntegralList
+2019-08-16 16:02:48.652 [http-nio-8080-exec-10] DEBUG o.f.a.m.integral.IntegralMapper.getIntegralList - ==>  Preparing: SELECT t.INTEGRAL_ID, t.AMOUNT, t.TOP_UP_INTEGRAL, t.PRESENT_INTEGRAL, t.OPEN_ID, t.CREATE_TIME, t.AGENT, t.REMARK FROM wx_applet_integral t WHERE t.OPEN_ID = ? AND `STATUS` = '1' 
+2019-08-16 16:02:48.653 [http-nio-8080-exec-10] DEBUG o.f.a.m.integral.IntegralMapper.getIntegralList - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:02:48.674 [http-nio-8080-exec-10] DEBUG o.f.a.m.integral.IntegralMapper.getIntegralList - <==      Total: 0
+2019-08-16 16:02:48.678 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:02:48.678 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:08:44.081 [Thread-16] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-16 16:08:44.085 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-08-16 16:10:13.730 [restartedMain] INFO  org.fh.api.FhiApiApplication - Starting FhiApiApplication on YK219ZAO71X6ZV0 with PID 14596 (C:\Dysprep\svn\bin\svn\fh_api\target\classes started by Administrator in C:\Dysprep\svn\bin\svn\fh_api)
+2019-08-16 16:10:13.732 [restartedMain] INFO  org.fh.api.FhiApiApplication - No active profile set, falling back to default profiles: default
+2019-08-16 16:10:13.782 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-16 16:10:13.782 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-16 16:10:15.176 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-08-16 16:10:15.188 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-16 16:10:15.195 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-16 16:10:15.195 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-08-16 16:10:15.202 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2019-08-16 16:10:15.302 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-16 16:10:15.302 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1520 ms
+2019-08-16 16:10:15.950 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-16 16:10:16.268 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-08-16 16:10:16.296 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-08-16 16:10:16.320 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-16 16:10:16.323 [restartedMain] INFO  org.fh.api.FhiApiApplication - Started FhiApiApplication in 3.024 seconds (JVM running for 4.038)
+2019-08-16 16:10:33.418 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-16 16:10:33.419 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-16 16:10:33.426 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2019-08-16 16:10:33.444 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:10:33.444 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:10:33.445 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:10:33.445 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:10:33.445 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:10:33.446 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:10:33.467 [http-nio-8080-exec-3] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-08-16 16:10:33.467 [http-nio-8080-exec-2] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-08-16 16:10:33.469 [http-nio-8080-exec-1] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-08-16 16:10:33.482 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:10:33.483 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:10:33.484 [http-nio-8080-exec-4] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-08-16 16:10:33.506 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:10:33.506 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:10:33.506 [http-nio-8080-exec-5] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-08-16 16:10:33.538 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:10:33.539 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:10:33.539 [http-nio-8080-exec-6] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-16 16:10:33.552 [http-nio-8080-exec-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-08-16 16:10:33.932 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-08-16 16:10:33.976 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-08-16 16:10:34.029 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-08-16 16:10:34.031 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-16 16:10:34.031 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-08-16 16:10:34.054 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:10:34.054 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:10:34.057 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:10:34.057 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:E0C6D6B1B2A355410C20AB32471D65AE
+2019-08-16 16:10:34.057 [http-nio-8080-exec-1] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-16 16:10:34.059 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-16 16:10:34.060 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-08-16 16:10:34.060 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-08-16 16:10:34.062 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:10:34.063 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:10:34.067 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:10:34.071 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:BB7A22C051AD2FFA00D911DD49C84B44
+2019-08-16 16:10:34.092 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-08-16 16:10:34.092 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-08-16 16:10:34.092 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-08-16 16:10:34.094 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:10:34.094 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:10:34.122 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-08-16 16:10:34.123 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-08-16 16:10:34.124 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-08-16 16:10:34.125 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:10:34.125 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:10:34.150 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-08-16 16:10:34.151 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-08-16 16:10:34.155 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-08-16 16:10:34.157 [http-nio-8080-exec-1] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-16 16:10:34.158 [http-nio-8080-exec-1] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-08-16 16:10:34.160 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:10:34.160 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:10:34.177 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-08-16 16:10:34.181 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:10:34.181 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:10:34.186 [http-nio-8080-exec-1] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-16 16:10:34.189 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:10:34.189 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:10:34.217 [http-nio-8080-exec-7] INFO  org.fh.api.controller.user.UserLoginController - 061V6n3d08AlPz1Lqj1d0sQs3d0V6n3R
+2019-08-16 16:10:35.032 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-16 16:10:35.033 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:10:35.059 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-16 16:10:35.060 [http-nio-8080-exec-7] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-16 16:10:35.060 [http-nio-8080-exec-7] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:10:35.114 [http-nio-8080-exec-7] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-16 16:10:35.116 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:10:35.116 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:10:35.671 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:10:35.672 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:BB7A22C051AD2FFA00D911DD49C84B44
+2019-08-16 16:10:35.674 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:10:35.675 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:10:35.677 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:10:35.677 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:BB7A22C051AD2FFA00D911DD49C84B44
+2019-08-16 16:10:35.678 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-16 16:10:35.679 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:10:35.706 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-16 16:10:35.709 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:10:35.710 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:16:32.550 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:16:32.551 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:BB7A22C051AD2FFA00D911DD49C84B44
+2019-08-16 16:16:32.593 [http-nio-8080-exec-1] DEBUG o.f.a.m.c.CustomerMapper.getCustomerByOpenId - ==>  Preparing: SELECT CUSTOMER_ID, OPEN_ID, CUST_NAME, TEL, BIRTHDAY, COUNTRY_TEL_CODE, EMAIL FROM wx_applet_customer WHERE OPEN_ID=? 
+2019-08-16 16:16:32.593 [http-nio-8080-exec-1] DEBUG o.f.a.m.c.CustomerMapper.getCustomerByOpenId - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:16:32.621 [http-nio-8080-exec-1] DEBUG o.f.a.m.c.CustomerMapper.getCustomerByOpenId - <==      Total: 1
+2019-08-16 16:16:32.623 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:16:32.624 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:16:33.781 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:16:33.782 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:BB7A22C051AD2FFA00D911DD49C84B44
+2019-08-16 16:16:33.784 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:16:33.785 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:16:33.789 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:16:33.790 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:BB7A22C051AD2FFA00D911DD49C84B44
+2019-08-16 16:16:33.791 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-16 16:16:33.792 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:16:33.820 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-16 16:16:33.822 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:16:33.822 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:25:17.746 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:25:17.747 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:BB7A22C051AD2FFA00D911DD49C84B44
+2019-08-16 16:25:17.750 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:25:17.750 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 16:25:17.752 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-16 16:25:17.752 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:BB7A22C051AD2FFA00D911DD49C84B44
+2019-08-16 16:25:19.764 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-16 16:25:19.764 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-16 16:25:19.785 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-16 16:25:19.787 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-16 16:25:19.787 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-16 17:19:13.775 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-16 17:19:13.778 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

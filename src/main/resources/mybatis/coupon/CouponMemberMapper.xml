@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.coupon.CouponMemberMapper">
+	
+	<!--表名 -->
+	<sql id="tableName">
+		wx_applet_coupon_member
+	</sql>
+
+	<sql id="Field">
+		COUPON_MEMBER_ID,
+		COUPON_ID,
+		OPEN_ID,
+		SERVICES_ID,
+		USE_STATUS,
+		USE_DATE
+
+	</sql>
+
+	<sql id="FieldValue">
+		#{couponMemberId},
+		#{couponId},
+		#{openId},
+		#{servicesId},
+		#{useStatus},
+		#{useDate}
+	</sql>
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.coupon.CouponMemberDetail" >
+		<id column="COUPON_MEMBER_ID" property="couponMemberId"  />
+		<result column="COUPON_ID" property="couponId"  />
+		<result column="COUPON_TYPE" property="couponType"  />
+		<result column="SERVICES_ID" property="servicesId"  />
+		<result column="COUPON_TITLE" property="couponTitle"  />
+		<result column="COUPON_REMARK" property="couponRemark"  />
+		<result column="DISCOUNT_LIMIT_AMT" property="discountLimitAmt"  />
+		<result column="DISCOUNT_AMT" property="discountAmt"  />
+		<result column="VALIDATE_TIME" property="validateTime"  />
+		<result column="EXPIRE_TIME" property="expireTime"  />
+		<result column="CREATE_TIME" property="createTime"  />
+		<result column="USE_STATUS" property="useStatus"  />
+		<result column="USE_DATE" property="useDate"  />
+	</resultMap>
+
+	<!-- 新增优惠券记录-->
+	<insert id="saveCouponMember" parameterType="org.fh.api.pojo.coupon.CouponMember">
+		insert into
+		<include refid="tableName"></include>
+		(
+		<include refid="Field"></include>
+		) values (
+		<include refid="FieldValue"></include>
+		)
+	</insert>
+
+
+	<update id="updateCouponMemberById" parameterType="org.fh.api.pojo.coupon.CouponMember">
+		 update
+			wx_applet_coupon_member t
+		 <trim prefix="set" suffixOverrides=",">
+		 	<if test="servicesId != null and servicesId != ''">  
+		           t.SERVICES_ID = #{servicesId},
+		    </if>
+			<if test="useStatus != null and useStatus != ''">  
+				   t.USE_STATUS = #{useStatus},
+			</if>
+			<if test="useDate != null and useDate != ''">  
+				   t.USE_DATE = #{useDate},
+			</if>
+		WHERE t.COUPON_MEMBER_ID = #{couponMemberId}
+		</trim>
+	</update>
+
+	<!--查询用户名下所有的优惠券列表-->
+	<select id="selectAllCouponMemberByOpenId"  parameterType="String" resultMap="BaseResultMap">
+		SELECT
+		a.COUPON_MEMBER_ID,
+		a.OPEN_ID,
+		a.COUPON_ID,
+		b.COUPON_TYPE,
+		b.SERVICES_ID,
+		b.COUPON_TITLE,
+		b.COUPON_REMARK,
+		b.DISCOUNT_LIMIT_AMT,
+		b.DISCOUNT_AMT,
+		b.VALIDATE_TIME,
+		b.EXPIRE_TIME,
+		a.CREATE_TIME,
+		a.USE_STATUS,
+		a.USE_DATE
+		FROM
+		wx_applet_coupon_member a
+		LEFT JOIN
+		wx_applet_coupon b ON (a.COUPON_ID = b.COUPON_ID)
+		WHERE
+		a.OPEN_ID = #{openId}
+	</select>
+
+	<!--查询用户名下 已经使用的优惠券-->
+	<select id="selectStatusCouponMemberByOpenId"  parameterType="String"  resultMap="BaseResultMap">
+		SELECT
+		a.COUPON_MEMBER_ID,
+		a.OPEN_ID,
+		a.COUPON_ID,
+		b.COUPON_TYPE,
+		b.SERVICES_ID,
+		b.COUPON_TITLE,
+		b.COUPON_REMARK,
+		b.DISCOUNT_LIMIT_AMT,
+		b.DISCOUNT_AMT,
+		b.VALIDATE_TIME,
+		b.EXPIRE_TIME,
+		a.CREATE_TIME,
+		a.USE_STATUS,
+		a.USE_DATE
+		FROM
+		wx_applet_coupon_member a
+		LEFT JOIN
+		wx_applet_coupon b ON (a.COUPON_ID = b.COUPON_ID)
+		WHERE
+		a.OPEN_ID = #{openId}
+		AND
+		a.USE_STATUS = #{useStatus}
+	</select>
+
+	<!--根据id查询优惠券详情内容-->
+	<select id="getCouponMemberById"  parameterType="String"  resultMap="BaseResultMap">
+		SELECT
+		a.COUPON_MEMBER_ID,
+		a.OPEN_ID,
+		a.COUPON_ID,
+		b.COUPON_TYPE,
+		b.SERVICES_ID,
+		b.COUPON_TITLE,
+		b.COUPON_REMARK,
+		b.DISCOUNT_LIMIT_AMT,
+		b.DISCOUNT_AMT,
+		b.VALIDATE_TIME,
+		b.EXPIRE_TIME,
+		a.CREATE_TIME,
+		a.USE_STATUS,
+		a.USE_DATE
+		FROM
+		wx_applet_coupon_member a
+		LEFT JOIN
+		wx_applet_coupon b ON (a.COUPON_ID = b.COUPON_ID)
+		WHERE
+		a.COUPON_MEMBER_ID = #{couponMemberId}
+	</select>
+
+	<select id="getCouponMemberByCouponId"  parameterType="String"  resultMap="BaseResultMap">
+		SELECT
+		a.COUPON_MEMBER_ID,
+		a.OPEN_ID,
+		a.COUPON_ID,
+		b.COUPON_TYPE,
+		b.SERVICES_ID,
+		b.COUPON_TITLE,
+		b.COUPON_REMARK,
+		b.DISCOUNT_LIMIT_AMT,
+		b.DISCOUNT_AMT,
+		b.VALIDATE_TIME,
+		b.EXPIRE_TIME,
+		a.CREATE_TIME,
+		a.USE_STATUS,
+		a.USE_DATE
+		FROM
+		wx_applet_coupon_member a
+		LEFT JOIN
+		wx_applet_coupon b ON (a.COUPON_ID = b.COUPON_ID)
+		WHERE
+		a.COUPON_ID = #{couponId}
+		AND
+		a.OPEN_ID=#{openId}
+	</select>
+</mapper>

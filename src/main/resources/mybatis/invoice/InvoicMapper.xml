@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.invoice.InvoicMapper">
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.invoice.Invoice" >
+		<id column="ORDER_INVOICE_ID" property="orderInvoiceId"  />
+		<result column="IMG_URL" property="imgUrl"  />
+		<result column="ORDER_NO" property="orderNo"  />
+		<result column="SERVICES_ID" property="servicesId"  />
+		<result column="SERVICES_NAME" property="servicesName"  />
+		<result column="TITLE" property="title"  />
+		<result column="TAX_NO" property="taxNo"  />
+	</resultMap>
+
+	<select id="getAllInvoiceByOpenId" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+		b.ORDER_INVOICE_ID,
+		b.IMG_URL,
+		a.ORDER_NO,
+		a.SERVICES_ID,
+		d.`NAME` AS SERVICES_NAME,
+		a.TITLE,
+		a.TAX_NO
+		FROM
+		wx_applet_order_invoice b
+		LEFT JOIN wx_applet_order a ON (a.ORDER_NO = b.IORDER_NO)
+		LEFT JOIN wx_applet_services c ON (
+		c.SERVICES_ID = a.SERVICES_ID
+		)
+		LEFT JOIN sys_dictionaries d ON (c.SERVICE_TYPE = d.BIANMA)
+		WHERE
+		a.OPEN_ID = #{openId}
+	</select>
+</mapper>

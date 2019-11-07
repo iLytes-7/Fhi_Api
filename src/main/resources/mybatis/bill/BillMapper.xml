@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.bill.BillMapper">
+	
+	<!--表名 -->
+	<sql id="tableName">
+		wx_applet_bill
+	</sql>
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.bill.BillBean" >
+		<id column="BILL_ID" property="billId"  />
+		<result column="SERVICES_ID" property="servicesId"  />
+		<result column="SERVICES_NAME" property="servicesName"  />
+		<result column="OPEN_ID" property="openId"  />
+		<result column="BIll_NO" property="billNo"  />
+		<result column="BIll_AMOUNT" property="billAmount"  />
+		<result column="IS_NEED_INVOICE" property="isNeedInvoice"  />
+		<result column="TITLE" property="title"  />
+		<result column="TAX_NO" property="taxNo"  />
+		<result column="PAY_STATUS" property="payStatus"  />
+		<result column="STATUS" property="status"  />
+		<result column="REMARK" property="remark"  />
+		<result column="PAYMENT_TYPE" property="paymentType"  />
+		<result column="CREATE_TIME" property="createTime"  />
+	</resultMap>
+
+    <update id="updateBillStatus" parameterType="org.fh.api.pojo.bill.BillBean">
+        UPDATE
+            wx_applet_bill
+        SET
+            IS_NEED_INVOICE = #{isNeedInvoice},
+            TITLE = #{title},
+            TAX_NO = #{taxNo},
+            PAYMENT_TYPE = #{paymentType},
+            PAY_STATUS = #{payStatus},
+            STATUS = #{status}
+        WHERE
+            BILL_ID = #{billId}
+    </update>
+    <update id="updateBillInvoice" parameterType="org.fh.api.pojo.bill.BillBean">
+        UPDATE
+            wx_applet_bill
+        SET
+            IS_NEED_INVOICE = #{isNeedInvoice},
+            TITLE = #{title},
+            TAX_NO = #{taxNo}
+        WHERE
+            BILL_ID = #{billId}
+    </update>
+    <update id="updateBillStatusWxPay" parameterType="org.fh.api.pojo.bill.BillBean">
+        UPDATE
+            wx_applet_bill
+        SET
+            PAYMENT_TYPE = #{paymentType},
+            PAY_STATUS = #{payStatus},
+            STATUS = #{status}
+        WHERE
+            BILL_ID = #{billId}
+    </update>
+
+
+
+	<select id="getBillList" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+        a.BILL_ID,
+        a.SERVICES_ID,
+        a.OPEN_ID,
+        a.BIll_NO,
+        a.IS_NEED_INVOICE,
+        a.TITLE,
+        a.TAX_NO,
+        a.BIll_AMOUNT,
+        d.`NAME` as PAY_STATUS,
+        e.`NAME` AS `STATUS`,
+        c.`NAME` AS SERVICES_NAME,
+        a.REMARK,
+        a.CREATE_TIME,
+        a.PAYMENT_TYPE
+        FROM
+        wx_applet_bill a
+        LEFT JOIN wx_applet_services b ON (
+        a.SERVICES_ID = b.SERVICES_ID
+        )
+        LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+        LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA)
+        LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA)
+        WHERE
+        a.OPEN_ID = #{openId}
+	</select>
+    <select id="getBillById" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+        a.BILL_ID,
+        a.SERVICES_ID,
+        a.OPEN_ID,
+        a.BIll_NO,
+        a.IS_NEED_INVOICE,
+        a.TITLE,
+        a.TAX_NO,
+        a.BIll_AMOUNT,
+        d.`NAME` as PAY_STATUS,
+        e.`NAME` AS `STATUS`,
+        c.`NAME` AS SERVICES_NAME,
+        a.REMARK,
+        a.CREATE_TIME,
+        a.PAYMENT_TYPE
+        FROM
+        wx_applet_bill a
+        LEFT JOIN wx_applet_services b ON (
+        a.SERVICES_ID = b.SERVICES_ID
+        )
+        LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+        LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA)
+        LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA)
+        WHERE
+        a.BILL_ID = #{billId}
+	</select>
+
+
+    <select id="getBillBybillNo" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+        a.BILL_ID,
+        a.SERVICES_ID,
+        a.OPEN_ID,
+        a.BIll_NO,
+        a.IS_NEED_INVOICE,
+        a.TITLE,
+        a.TAX_NO,
+        a.BIll_AMOUNT,
+        d.`NAME` as PAY_STATUS,
+        e.`NAME` AS `STATUS`,
+        c.`NAME` AS SERVICES_NAME,
+        a.REMARK,
+        a.CREATE_TIME,
+        a.PAYMENT_TYPE
+        FROM
+        wx_applet_bill a
+        LEFT JOIN wx_applet_services b ON (
+        a.SERVICES_ID = b.SERVICES_ID
+        )
+        LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+        LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA)
+        LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA)
+        WHERE
+        a.BIll_NO = #{billNo}
+	</select>
+
+    <select id="getBillListByPayStatus" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+        a.BILL_ID,
+        a.SERVICES_ID,
+        a.OPEN_ID,
+        a.BIll_NO,
+        a.IS_NEED_INVOICE,
+        a.TITLE,
+        a.TAX_NO,
+        a.BIll_AMOUNT,
+        d.`NAME` as PAY_STATUS,
+        e.`NAME` AS `STATUS`,
+        c.`NAME` AS SERVICES_NAME,
+        a.REMARK,
+        a.CREATE_TIME,
+        a.PAYMENT_TYPE
+        FROM
+        wx_applet_bill a
+        LEFT JOIN wx_applet_services b ON (
+        a.SERVICES_ID = b.SERVICES_ID
+        )
+        LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+        LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA)
+        LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA)
+        where a.PAY_STATUS =#{payStatus}
+        and
+        a.OPEN_ID =#{openId}
+        ORDER BY
+        a.CREATE_TIME
+        DESC
+    </select>
+
+
+
+</mapper>

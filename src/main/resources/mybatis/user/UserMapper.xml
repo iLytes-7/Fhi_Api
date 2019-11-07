@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.user.UserMapper">
+
+    <!--表名 -->
+    <sql id="tableName">
+        WX_APPLET_MEMBER
+    </sql>
+
+    <resultMap id="BaseResultMap" type="org.fh.api.pojo.user.User" >
+        <id column="MEMBER_ID" property="memberId"  />
+        <result column="OPEN_ID" property="openId"  />
+        <result column="UNION_ID" property="unionId"  />
+        <result column="NICK_NAME" property="nickName"  />
+        <result column="FULL_NAME" property="fullName"  />
+        <result column="SEX" property="sex"  />
+        <result column="TEL" property="tel"  />
+        <result column="COUNTRY" property="country"  />
+        <result column="PROVINCE" property="province"  />
+        <result column="CITY" property="city"  />
+        <result column="HEAD_IMG" property="headImg"  />
+        <result column="JI_FEN" property="jiFen"  />
+        <result column="COMPANY_NAME" property="companyName"  />
+        <result column="TAX_NO" property="taxNo"  />
+    </resultMap>
+
+    <!-- 字段 -->
+    <sql id="Field">
+        f.MEMBER_ID,
+        f.OPEN_ID,
+        f.UNION_ID,
+        f.NICK_NAME,
+        f.FULL_NAME,
+        f.SEX,
+        f.TEL,
+        f.COUNTRY,
+        f.PROVINCE,
+        f.CITY,
+        f.HEAD_IMG,
+        f.JI_FEN,
+        f.COMPANY_NAME,
+        f.CREATE_TIME,
+        f.TAX_NO
+    </sql>
+
+    <!-- 字段用于新增 -->
+    <sql id="Field2">
+        MEMBER_ID,
+        OPEN_ID,
+        UNION_ID,
+        NICK_NAME,
+        FULL_NAME,
+        SEX,
+        TEL,
+        COUNTRY,
+        PROVINCE,
+        CITY,
+        HEAD_IMG,
+
+        COMPANY_NAME,
+        TAX_NO
+    </sql>
+
+    <!-- 字段值 -->
+    <sql id="FieldValue">
+        #{memberId},
+        #{openId},
+        #{unionId},
+        #{nickName},
+        #{fullName},
+        #{sex},
+        #{tel},
+        #{country},
+        #{province},
+        #{city},
+        #{headImg},
+
+        #{companyName},
+        #{taxNo}
+    </sql>
+
+    <!-- 新增-->
+    <insert id="saveUser" parameterType="org.fh.api.pojo.user.User">
+        insert into
+        <include refid="tableName"></include>
+        (
+        <include refid="Field2"></include>
+        ) values (
+        <include refid="FieldValue"></include>
+        )
+    </insert>
+
+
+    <!-- 修改 -->
+    <update id="updateUserListByOpenid"  parameterType="org.fh.api.pojo.user.User">
+        update
+        <include refid="tableName"></include>
+        set
+        MEMBER_ID = #{memberId},
+        <!--OPEN_ID = #{openId},-->
+        UNION_ID = #{unionId},
+        NICK_NAME = #{nickName},
+        FULL_NAME = #{fullName},
+        SEX = #{sex},
+        TEL = #{tel},
+        COUNTRY = #{country},
+        PROVINCE = #{province},
+        CITY = #{city},
+        HEAD_IMG = #{headImg},
+        JI_FEN = #{jiFen},
+        COMPANY_NAME = #{companyName},
+        TAX_NO = #{taxNo}
+        where
+        OPEN_ID = #{openId}
+    </update>
+
+    <!-- 通过ID获取数据 -->
+    <select id="getUserByOpenid" parameterType="String" resultMap="BaseResultMap">
+        select
+        <include refid="Field"></include>
+        from
+        <include refid="tableName"></include> f
+        where
+            f.OPEN_ID = #{openid}
+    </select>
+
+
+
+</mapper>

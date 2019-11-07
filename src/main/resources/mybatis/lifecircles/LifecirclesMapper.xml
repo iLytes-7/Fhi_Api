@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.lifecircles.LifecirclesMapper">
+	
+	<!--表名 -->
+	<sql id="tableName">
+		wx_applet_life_circles
+	</sql>
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.lifecircles.Lifecircles" >
+		<id column="LIFE_CIRCLE_ID" property="lifeCircleId"  />
+		<result column="LIFE_CIRCLE_TYPE" property="lifeCircleType"  />
+		<result column="RECOMMENDATION" property="recommendation"  />
+		<result column="IMG" property="img"  />
+		<result column="TITLE" property="title"  />
+		<result column="CONTENT" property="content"  />
+		<result column="BROWSE_TIMES" property="browseTimes"  />
+		<result column="SHARE_TIMES" property="shareTime"  />
+		<result column="CREATE_TIME" property="createTime"  />
+		<result column="BRIEF_INTRODUCTION" property="briefIntroduction"  />
+
+	</resultMap>
+
+	<!--根据生活圈种类查询生活圈列表-->
+	<select id="getCircleKind" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+		a.LIFE_CIRCLE_ID,
+		b.`NAME` AS LIFE_CIRCLE_TYPE,
+		a.RECOMMENDATION,
+		a.IMG,
+		a.TITLE,
+		a.CONTENT,
+		a.BROWSE_TIMES,
+		a.SHARE_TIMES,
+		a.CREATE_TIME,
+		a.BRIEF_INTRODUCTION
+		FROM
+		wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA)
+		WHERE
+		b.BIANMA=#{kind}
+	</select>
+
+	<!--根据生活圈是否推荐来查询生活圈列表-->
+	<select id="getCircleRecommend"  resultMap="BaseResultMap">
+		SELECT
+		a.LIFE_CIRCLE_ID,
+		a.RECOMMENDATION,
+		a.IMG,
+		a.TITLE,
+		a.CONTENT,
+		a.BROWSE_TIMES,
+		a.SHARE_TIMES,
+		a.CREATE_TIME,
+		a.BRIEF_INTRODUCTION
+		FROM
+		wx_applet_life_circles a
+		WHERE
+		a.RECOMMENDATION = 'yes'
+	</select>
+
+	<!--根据生活圈的新闻id查询对应的消息列表-->
+	<select id="getCircleNewsById" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+		a.LIFE_CIRCLE_ID,
+		a.LIFE_CIRCLE_TYPE,
+		a.IMG,
+		a.TITLE,
+		a.CONTENT,
+		a.BROWSE_TIMES,
+		a.SHARE_TIMES,
+		a.CREATE_TIME,
+		a.BRIEF_INTRODUCTION
+		FROM
+		wx_applet_life_circles a
+		WHERE
+		a.LIFE_CIRCLE_ID = #{id}
+	</select>
+</mapper>

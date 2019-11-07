@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.banner.BannerMapper">
+	
+	<!--表名 -->
+	<sql id="tableName">
+		wx_applet_banner
+	</sql>
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.banner.BannerIndex" >
+		<id column="BANNER_ID" property="bannerId"  />
+		<result column="IMG" property="img"  />
+		<result column="LINK" property="link"  />
+		<result column="NAME" property="name"  />
+
+	</resultMap>
+	<select id="getBannerList" parameterType="String" resultMap="BaseResultMap">
+		select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA)
+		where b.BIANMA = #{param} ORDER BY a.ORDER_BY ;
+	</select>
+	<!-- yyh-Oracles -->
+</mapper>

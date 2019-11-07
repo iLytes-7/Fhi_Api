@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.servicesitem.ServiceitemMapper">
+
+    <!--表名 -->
+    <sql id="tableName">
+        wx_applet_services
+    </sql>
+    <sql id="serviceFileStatusTable">
+        wx_applet_service_filestatus
+    </sql>
+    <sql id="serviceItemStatusTable">
+        wx_applet_service_itemstatus
+    </sql>
+
+    <sql id="Field1">
+        STATUS_ID,
+        FILE_ID,
+        ORDER_ID,
+        FILE_NAME,
+        FILE_PATH,
+        FILE_FULL_PATH,
+        STATUS
+    </sql>
+
+    <sql id="Field2">
+        STATUS_ID,
+        ITEM_ID,
+        ORDER_ID,
+        STATUS
+    </sql>
+
+    <!-- 字段值 -->
+    <sql id="FieldValue1">
+        #{statusId},
+        #{fileId},
+        #{orderId},
+        #{fileName},
+        #{filePath},
+        #{fileFullPath},
+        #{status}
+    </sql>
+
+    <!-- 字段值 -->
+    <sql id="FieldValue2">
+        #{statusId},
+        #{itemId},
+        #{orderId},
+        #{status}
+    </sql>
+
+    <resultMap id="ServiceFileStatusMap" type="org.fh.api.pojo.servicesitem.ServiceFileStatus" >
+        <id column="STATUS_ID" property="statusId"  />
+        <result column="FILE_ID" property="fileId"  />
+        <result column="ORDER_ID" property="orderId"  />
+        <result column="FILE_NAME" property="fileName"  />
+        <result column="FILE_PATH" property="filePath"  />
+        <result column="FILE_FULL_PATH" property="fileFullPath"  />
+        <result column="STATUS" property="status"  />
+    </resultMap>
+
+
+    <resultMap id="ServiceItemStatusMap" type="org.fh.api.pojo.servicesitem.ServiceItemStatus" >
+        <id column="STATUS_ID" property="statusId"  />
+        <result column="ITEM_ID" property="itemId"  />
+        <result column="ORDER_ID" property="orderId"  />
+        <result column="STATUS" property="status"  />
+    </resultMap>
+
+    <resultMap id="BaseResultMap" type="org.fh.api.pojo.servicesitem.ServiceitemIndex" >
+        <id column="SERVICES_ID" property="servicesID"  />
+        <result column="SERVICE_ICON" property="serviceIcon"  />
+        <result column="SERVICE_TYPE" property="serviceType"  />
+        <result column="ORDER_BY" property="orderby"  />
+    </resultMap>
+
+    <resultMap id="DetailResultMap" type="org.fh.api.pojo.servicesitem.ServiceitemDetail" >
+        <id column="SERVICES_ID" property="servicesID"  />
+        <result column="SERVICE_IMG" property="serviceImg"  />
+        <result column="SERVICE_DESC" property="serviceDesc"  />
+        <result column="SERVICE_CONTENT" property="serviceContent"  />
+        <result column="PRICE" property="price"  />
+        <result column="SERVICE_NAME" property="servicesName"  />
+        <result column="DISPLAY_PRICE" property="displayPrice"  />
+    </resultMap>
+
+    <resultMap id="ServiceitemCategory" type="org.fh.api.pojo.servicesitem.ServiceitemCategory" >
+        <id column="DICTIONARIES_ID" property="id"  />
+        <result column="NAME" property="name"  />
+        <result column="NAME_EN" property="nameEn"  />
+        <result column="SERVICE_IMG" property="serviceImg"  />
+        <result column="SERVICES_ID" property="serviceId"  />
+    </resultMap>
+
+    <resultMap id="SimpleServices" type="org.fh.api.pojo.services.SimpleService" >
+        <id column="SERVICES_ID" property="servicesId"  />
+        <result column="NAME" property="servicesName"  />
+    </resultMap>
+
+    <select id="getCategoryList"  parameterType="String"  resultMap="ServiceitemCategory">
+        select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a
+        left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE)
+        where PARENT_ID = #{parentId} order by a.ORDER_BY
+    </select>
+
+
+
+    <select id="getAllSimpleService"  parameterType="String"  resultMap="SimpleServices">
+        SELECT
+        a.SERVICES_ID,
+        b.`NAME`
+        FROM
+        wx_applet_services a
+        LEFT JOIN
+        sys_dictionaries b
+        ON
+        (a.SERVICE_TYPE = b.BIANMA)
+        WHERE
+        b.`NAME` LIKE CONCAT(CONCAT('%', #{servicesName}),'%')
+        ORDER BY
+        a.ORDER_BY
+    </select>
+
+
+
+
+    <insert id="saveServiceFileStatus" parameterType="org.fh.api.pojo.servicesitem.ServiceFileStatus">
+        insert into
+        <include refid="serviceFileStatusTable"></include>
+        (
+        <include refid="Field1"></include>
+        ) values (
+        <include refid="FieldValue1"></include>
+        )
+    </insert>
+
+    <insert id="saveServiceItemStatus" parameterType="org.fh.api.pojo.servicesitem.ServiceItemStatus">
+        insert into
+        <include refid="serviceItemStatusTable"></include>
+        (
+        <include refid="Field2"></include>
+        ) values (
+        <include refid="FieldValue2"></include>
+        )
+    </insert>
+
+    <select id="getServiceFileStatus" parameterType="String" resultMap="ServiceFileStatusMap">
+        SELECT
+        STATUS_ID,
+        FILE_ID,
+        ORDER_ID,
+        FILE_NAME,
+        FILE_PATH,
+        FILE_FULL_PATH,
+        STATUS
+        FROM
+        wx_applet_service_filestatus
+        WHERE
+        ORDER_ID = #{param}
+    </select>
+
+    <select id="getServiceItemStatus" parameterType="String" resultMap="ServiceItemStatusMap">
+        SELECT
+        STATUS_ID,
+        ITEM_ID,
+        ORDER_ID,
+        STATUS
+        FROM
+        wx_applet_service_itemstatus
+        WHERE
+        ORDER_ID = #{param}
+    </select>
+
+
+    <select id="getIndexServiceitemDetail"  parameterType="String" resultMap="DetailResultMap">
+        SELECT
+        a.SERVICES_ID,
+        a.SERVICE_IMG,
+        a.SERVICE_DESC,
+        a.SERVICE_CONTENT,
+        a.PRICE,
+        a.DISPLAY_PRICE,
+        b.`NAME` AS SERVICE_NAME
+        FROM
+        wx_applet_services a
+        LEFT JOIN sys_dictionaries b ON (
+        a.SERVICE_TYPE = b.BIANMA
+        )
+        WHERE
+        SERVICES_ID =  #{param}
+    </select>
+
+    <select id="getIndexServiceitemList" resultMap="BaseResultMap">
+        SELECT
+        a.SERVICES_ID,
+        a.SERVICE_ICON,
+        b.`NAME` AS SERVICE_TYPE,
+        a.ORDER_BY
+        FROM
+        wx_applet_services a
+        LEFT JOIN sys_dictionaries b ON (
+        a.SERVICE_TYPE = b.BIANMA
+        )
+        WHERE
+        a.HOME_PAGE_DISPLAY = 'yes'
+        ORDER BY
+        ORDER_BY
+        LIMIT 0,9
+    </select>
+</mapper>

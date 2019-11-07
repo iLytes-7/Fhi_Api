@@ -1,0 +1,1024 @@
+2019-07-17 10:07:45.163 [restartedMain] INFO  org.fh.api.FhiApiApplication - Starting FhiApiApplication on YK219ZAO71X6ZV0 with PID 6680 (C:\Dysprep\svn\bin\svn\fh_api\target\classes started by Administrator in C:\Dysprep\svn\bin\svn\fh_api)
+2019-07-17 10:07:45.165 [restartedMain] INFO  org.fh.api.FhiApiApplication - No active profile set, falling back to default profiles: default
+2019-07-17 10:07:45.232 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-17 10:07:45.233 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-17 10:07:47.072 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-17 10:07:47.086 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-17 10:07:47.095 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-17 10:07:47.095 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-07-17 10:07:47.102 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\TortoiseGit\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;.]
+2019-07-17 10:07:47.210 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-17 10:07:47.211 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1978 ms
+2019-07-17 10:07:47.933 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-17 10:07:48.257 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-17 10:07:48.289 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-17 10:07:48.314 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-17 10:07:48.317 [restartedMain] INFO  org.fh.api.FhiApiApplication - Started FhiApiApplication in 3.76 seconds (JVM running for 5.436)
+2019-07-17 10:08:14.831 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-17 10:08:14.832 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-17 10:08:14.839 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2019-07-17 10:08:14.861 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 10:08:14.864 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:54D667DF69822D5216FB5EE22628EAA8
+2019-07-17 10:08:14.872 [http-nio-8080-exec-1] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleRecommend
+2019-07-17 10:08:14.934 [http-nio-8080-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-17 10:08:15.283 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleRecommend - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a WHERE a.RECOMMENDATION = 'yes' 
+2019-07-17 10:08:15.343 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleRecommend - ==> Parameters: 
+2019-07-17 10:08:15.394 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleRecommend - <==      Total: 2
+2019-07-17 10:08:15.433 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 10:08:15.434 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 10:22:51.443 [Thread-16] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-17 10:22:51.448 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-07-17 18:03:30.258 [restartedMain] INFO  org.fh.api.FhiApiApplication - Starting FhiApiApplication on YK219ZAO71X6ZV0 with PID 14608 (C:\Dysprep\svn\bin\svn\fh_api\target\classes started by Administrator in C:\Dysprep\svn\bin\svn\fh_api)
+2019-07-17 18:03:30.261 [restartedMain] INFO  org.fh.api.FhiApiApplication - No active profile set, falling back to default profiles: default
+2019-07-17 18:03:30.318 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-17 18:03:30.318 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-17 18:03:31.637 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-17 18:03:31.651 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-17 18:03:31.660 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-17 18:03:31.660 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-07-17 18:03:31.665 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\TortoiseGit\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;.]
+2019-07-17 18:03:31.769 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-17 18:03:31.769 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1451 ms
+2019-07-17 18:03:32.413 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-17 18:03:32.713 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-17 18:03:32.740 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-17 18:03:32.767 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-17 18:03:32.770 [restartedMain] INFO  org.fh.api.FhiApiApplication - Started FhiApiApplication in 2.91 seconds (JVM running for 4.474)
+2019-07-17 18:07:01.680 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-17 18:07:01.680 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-17 18:07:01.688 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2019-07-17 18:07:01.707 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:07:01.710 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:2542E974B0C75C76F14FAAF04C7F0445
+2019-07-17 18:07:01.716 [http-nio-8080-exec-2] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleRecommend
+2019-07-17 18:07:01.768 [http-nio-8080-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-17 18:07:02.117 [http-nio-8080-exec-2] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleRecommend - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a WHERE a.RECOMMENDATION = 'yes' 
+2019-07-17 18:07:02.153 [http-nio-8080-exec-2] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleRecommend - ==> Parameters: 
+2019-07-17 18:07:02.197 [http-nio-8080-exec-2] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleRecommend - <==      Total: 2
+2019-07-17 18:07:02.228 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:07:02.228 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:14:40.310 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-17 18:14:40.315 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-07-17 18:14:45.471 [restartedMain] INFO  org.fh.api.FhiApiApplication - Starting FhiApiApplication on YK219ZAO71X6ZV0 with PID 20624 (C:\Dysprep\svn\bin\svn\fh_api\target\classes started by Administrator in C:\Dysprep\svn\bin\svn\fh_api)
+2019-07-17 18:14:45.474 [restartedMain] INFO  org.fh.api.FhiApiApplication - No active profile set, falling back to default profiles: default
+2019-07-17 18:14:45.544 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-17 18:14:45.545 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-17 18:14:47.042 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-17 18:14:47.059 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-17 18:14:47.068 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-17 18:14:47.069 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-07-17 18:14:47.076 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\TortoiseGit\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;.]
+2019-07-17 18:14:47.183 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-17 18:14:47.183 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1638 ms
+2019-07-17 18:14:47.865 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-17 18:14:48.192 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-17 18:14:48.223 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-17 18:14:48.257 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-17 18:14:48.259 [restartedMain] INFO  org.fh.api.FhiApiApplication - Started FhiApiApplication in 3.283 seconds (JVM running for 4.29)
+2019-07-17 18:15:24.249 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-17 18:15:24.249 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-17 18:15:24.257 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2019-07-17 18:15:24.276 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:24.279 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:24.283 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:11857D0D137B288D1155EFABA4615AE1
+2019-07-17 18:15:24.283 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:3E4580F34317EE9306891207E4886FA9
+2019-07-17 18:15:24.297 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:24.298 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:FDA706B6A1E7FD9A18C004603D27439C
+2019-07-17 18:15:24.303 [http-nio-8080-exec-3] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-07-17 18:15:24.303 [http-nio-8080-exec-2] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-07-17 18:15:24.306 [http-nio-8080-exec-1] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:15:24.310 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:24.311 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:43A393D67E838061815BF1E43BEBC667
+2019-07-17 18:15:24.312 [http-nio-8080-exec-4] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:15:24.330 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:24.331 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:42C6452ED3DA30D4279DDF0A80D6B2E4
+2019-07-17 18:15:24.332 [http-nio-8080-exec-5] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:15:24.352 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:24.352 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:0183DA104ED1F18E805A59D7327FCFF7
+2019-07-17 18:15:24.353 [http-nio-8080-exec-6] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:15:24.384 [http-nio-8080-exec-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-17 18:15:24.722 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-07-17 18:15:24.740 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-07-17 18:15:24.800 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-07-17 18:15:24.803 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:15:24.803 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-07-17 18:15:24.824 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:24.824 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:15:24.827 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:24.828 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:9933B41F405F8DE4818B03C3E5EBFD55
+2019-07-17 18:15:24.828 [http-nio-8080-exec-2] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:15:24.829 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:15:24.829 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:15:24.831 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-07-17 18:15:24.832 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:24.833 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:15:24.837 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:24.838 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:F2A46CE8D188000388C3509713BCE370
+2019-07-17 18:15:24.844 [http-nio-8080-exec-7] INFO  org.fh.api.controller.user.UserLoginController - 081varPU1qYXLY0dCmQU1a8tPU1varPt
+2019-07-17 18:15:24.860 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-07-17 18:15:24.860 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-07-17 18:15:24.861 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-07-17 18:15:24.869 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:24.869 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:15:24.890 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-07-17 18:15:24.891 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:15:24.891 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-07-17 18:15:24.893 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:24.894 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:15:24.919 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-07-17 18:15:24.920 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:15:24.921 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-07-17 18:15:24.923 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:24.923 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:15:24.950 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-07-17 18:15:24.951 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:15:24.952 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-07-17 18:15:24.953 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:24.954 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:15:24.977 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:15:24.981 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:24.981 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:15:25.703 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:25.703 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:15:26.103 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:26.104 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:A17FA8470827B23E264DEB28CA4C9B2F
+2019-07-17 18:15:26.424 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-07-17 18:15:26.424 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-07-17 18:15:26.449 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-07-17 18:15:26.450 [http-nio-8080-exec-8] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-07-17 18:15:26.450 [http-nio-8080-exec-8] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rcgXHbfQCw5Nf7wIDDF9nFg/132(String), null, null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-07-17 18:15:26.497 [http-nio-8080-exec-8] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-07-17 18:15:26.574 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:26.574 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:15:43.522 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:43.522 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:A17FA8470827B23E264DEB28CA4C9B2F
+2019-07-17 18:15:43.525 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:43.525 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:15:45.242 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:15:45.243 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:A17FA8470827B23E264DEB28CA4C9B2F
+2019-07-17 18:15:45.244 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:15:45.244 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:11.024 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:11.024 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:B11A6FD91969811265D2DB89BEFC15C6
+2019-07-17 18:16:11.025 [http-nio-8080-exec-6] INFO  org.fh.api.controller.user.UserLoginController - 001btyBD0zTb7l2NH6CD001rBD0btyBF
+2019-07-17 18:16:11.119 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:11.119 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:A17FA8470827B23E264DEB28CA4C9B2F
+2019-07-17 18:16:11.120 [http-nio-8080-exec-1] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:16:11.120 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:16:11.121 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-07-17 18:16:11.147 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-07-17 18:16:11.149 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:11.149 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:11.155 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:11.155 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:A17FA8470827B23E264DEB28CA4C9B2F
+2019-07-17 18:16:11.156 [http-nio-8080-exec-3] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-07-17 18:16:11.156 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-07-17 18:16:11.157 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-07-17 18:16:11.184 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-07-17 18:16:11.185 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:11.185 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:11.200 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:11.200 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:A17FA8470827B23E264DEB28CA4C9B2F
+2019-07-17 18:16:11.200 [http-nio-8080-exec-5] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-07-17 18:16:11.200 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-07-17 18:16:11.200 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-07-17 18:16:11.209 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:11.210 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:A17FA8470827B23E264DEB28CA4C9B2F
+2019-07-17 18:16:11.210 [http-nio-8080-exec-4] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:16:11.210 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:16:11.210 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-07-17 18:16:11.225 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-07-17 18:16:11.225 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:11.226 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:A17FA8470827B23E264DEB28CA4C9B2F
+2019-07-17 18:16:11.226 [http-nio-8080-exec-2] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:16:11.226 [http-nio-8080-exec-2] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:16:11.227 [http-nio-8080-exec-2] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-07-17 18:16:11.228 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:11.228 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:11.238 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-07-17 18:16:11.241 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:11.241 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:A17FA8470827B23E264DEB28CA4C9B2F
+2019-07-17 18:16:11.241 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:11.241 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:11.241 [http-nio-8080-exec-7] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:16:11.241 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:16:11.242 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-07-17 18:16:11.245 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:11.245 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:11.252 [http-nio-8080-exec-2] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-07-17 18:16:11.254 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:11.255 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:11.267 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:16:11.268 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:11.268 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:A17FA8470827B23E264DEB28CA4C9B2F
+2019-07-17 18:16:11.269 [http-nio-8080-exec-8] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:16:11.269 [http-nio-8080-exec-8] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:16:11.270 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:11.270 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:11.270 [http-nio-8080-exec-8] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-07-17 18:16:11.294 [http-nio-8080-exec-8] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:16:11.298 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:11.298 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:11.782 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:11.782 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:77514A7348CD543AE079EF3F22BB9896
+2019-07-17 18:16:11.808 [http-nio-8080-exec-9] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-07-17 18:16:11.809 [http-nio-8080-exec-9] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-07-17 18:16:11.835 [http-nio-8080-exec-9] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-07-17 18:16:11.837 [http-nio-8080-exec-9] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-07-17 18:16:11.839 [http-nio-8080-exec-9] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rcgXHbfQCw5Nf7wIDDF9nFg/132(String), null, null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-07-17 18:16:11.885 [http-nio-8080-exec-9] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-07-17 18:16:11.957 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:11.957 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:18.615 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:18.616 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:6E0E5435740978F3E764CB1819ED1DBD
+2019-07-17 18:16:18.616 [http-nio-8080-exec-10] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:16:18.617 [http-nio-8080-exec-10] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:16:18.617 [http-nio-8080-exec-10] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-07-17 18:16:18.644 [http-nio-8080-exec-10] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-07-17 18:16:18.648 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:18.648 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:18.660 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:18.660 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:ADCD8E4188DE4E9FD04D4150020A14D5
+2019-07-17 18:16:18.660 [http-nio-8080-exec-1] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-07-17 18:16:18.661 [http-nio-8080-exec-1] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-07-17 18:16:18.661 [http-nio-8080-exec-1] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-07-17 18:16:18.686 [http-nio-8080-exec-1] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-07-17 18:16:18.688 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:18.688 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:18.699 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:18.700 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:6408B00F3DA79C5E43EC382B3F1A8917
+2019-07-17 18:16:18.700 [http-nio-8080-exec-3] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-07-17 18:16:18.700 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-07-17 18:16:18.700 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-07-17 18:16:18.726 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-07-17 18:16:18.728 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:18.729 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:CD603942C459B7043C5A2D082E1D09DD
+2019-07-17 18:16:18.729 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:18.729 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:18.729 [http-nio-8080-exec-5] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:16:18.730 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:16:18.731 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-07-17 18:16:18.733 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:18.733 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:E7CA212FC26A525C49DD4DC80F55A90F
+2019-07-17 18:16:18.734 [http-nio-8080-exec-4] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:16:18.734 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:16:18.734 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-07-17 18:16:18.749 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:18.750 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:AB5269F61C859B694798840E8E9EF405
+2019-07-17 18:16:18.750 [http-nio-8080-exec-6] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:16:18.760 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-07-17 18:16:18.762 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:16:18.763 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-07-17 18:16:18.764 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:18.764 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:18.764 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:18.763 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-07-17 18:16:18.765 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:18.765 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:18.765 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:94CE62B4BF959032C1AE43CFE897E698
+2019-07-17 18:16:18.766 [http-nio-8080-exec-2] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:16:18.766 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:16:18.767 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-07-17 18:16:18.789 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:16:18.791 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:16:18.792 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:18.792 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:18.793 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:18.793 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:18.947 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:18.947 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:7E2163548C870382D493E48DF173B1A3
+2019-07-17 18:16:18.948 [http-nio-8080-exec-7] INFO  org.fh.api.controller.user.UserLoginController - 061WtaIR03wDR52FihFR0GNoIR0WtaIZ
+2019-07-17 18:16:19.071 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:19.071 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:20.007 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:20.008 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:48686B173F198F754E6FAA37E15E2045
+2019-07-17 18:16:23.022 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:23.023 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:382E7333C6422BAB788AE1BF89014F39
+2019-07-17 18:16:23.045 [http-nio-8080-exec-9] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-07-17 18:16:23.046 [http-nio-8080-exec-9] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-07-17 18:16:23.065 [http-nio-8080-exec-9] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-07-17 18:16:23.066 [http-nio-8080-exec-9] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-07-17 18:16:23.066 [http-nio-8080-exec-9] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rcgXHbfQCw5Nf7wIDDF9nFg/132(String), null, null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-07-17 18:16:23.100 [http-nio-8080-exec-9] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-07-17 18:16:23.151 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:23.151 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:35.620 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:35.620 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:0430DC078E5FB775F38766A80333BE67
+2019-07-17 18:16:35.620 [http-nio-8080-exec-3] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:16:35.621 [http-nio-8080-exec-3] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:16:35.621 [http-nio-8080-exec-3] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-07-17 18:16:35.641 [http-nio-8080-exec-3] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-07-17 18:16:35.644 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:35.644 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:35.648 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:35.648 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:220FFFD1931B79CE73E59C21755D34BA
+2019-07-17 18:16:35.648 [http-nio-8080-exec-5] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-07-17 18:16:35.649 [http-nio-8080-exec-5] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-07-17 18:16:35.649 [http-nio-8080-exec-5] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-07-17 18:16:35.668 [http-nio-8080-exec-5] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-07-17 18:16:35.669 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:35.670 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:35.688 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:35.689 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:7555C3C8B3B1C9713A59A146DE5A1E32
+2019-07-17 18:16:35.689 [http-nio-8080-exec-4] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-07-17 18:16:35.689 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-07-17 18:16:35.689 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-07-17 18:16:35.709 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-07-17 18:16:35.710 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:35.710 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:35.715 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:35.715 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:3D43301978E2A316F6B7BD3FAFEF6868
+2019-07-17 18:16:35.716 [http-nio-8080-exec-6] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:16:35.716 [http-nio-8080-exec-6] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:16:35.717 [http-nio-8080-exec-6] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-07-17 18:16:35.719 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:35.720 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:E6042E1C47565DC87BC936E6A7756B0B
+2019-07-17 18:16:35.720 [http-nio-8080-exec-2] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:16:35.720 [http-nio-8080-exec-2] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:16:35.720 [http-nio-8080-exec-2] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-07-17 18:16:35.733 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:35.734 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:40234D20BE2E05B8970F8CDB2BD6826E
+2019-07-17 18:16:35.734 [http-nio-8080-exec-7] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:16:35.735 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:16:35.735 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-07-17 18:16:35.737 [http-nio-8080-exec-6] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-07-17 18:16:35.739 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:35.739 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:35.742 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:35.742 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:38D0EDCA40452824CEE496006EB73E96
+2019-07-17 18:16:35.742 [http-nio-8080-exec-8] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:16:35.743 [http-nio-8080-exec-8] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:16:35.743 [http-nio-8080-exec-8] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-07-17 18:16:35.745 [http-nio-8080-exec-2] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-07-17 18:16:35.747 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:35.748 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:35.760 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:16:35.761 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:35.761 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:35.763 [http-nio-8080-exec-8] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:16:35.766 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:35.766 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:35.942 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:35.942 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:C535138FE3390B8085C59A4AB6E3C972
+2019-07-17 18:16:35.943 [http-nio-8080-exec-9] INFO  org.fh.api.controller.user.UserLoginController - 071YmATb1oks3w0YveVb1tcETb1YmATa
+2019-07-17 18:16:36.065 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:16:36.066 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:16:37.460 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:16:37.461 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:4DADF03A7A06470DA0A270960AE46308
+2019-07-17 18:18:41.362 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:41.363 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:70835A565289A75FDEF4DC2AFB57C596
+2019-07-17 18:18:41.364 [http-nio-8080-exec-6] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:18:41.377 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:41.377 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:4F69A71C7D5F71A794714B8A61F8EED8
+2019-07-17 18:18:41.378 [http-nio-8080-exec-2] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-07-17 18:18:41.390 [http-nio-8080-exec-6] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:18:41.390 [http-nio-8080-exec-6] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-07-17 18:18:41.407 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-07-17 18:18:41.407 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-07-17 18:18:41.409 [http-nio-8080-exec-6] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-07-17 18:18:41.413 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:41.413 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:41.433 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-07-17 18:18:41.435 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:41.435 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:41.441 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:41.441 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:20454668C1E0FD37420D2014C8B28C48
+2019-07-17 18:18:41.441 [http-nio-8080-exec-7] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-07-17 18:18:41.442 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-07-17 18:18:41.442 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-07-17 18:18:41.456 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:41.456 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:879D3D355B8D0B1815B8439509C63FF4
+2019-07-17 18:18:41.456 [http-nio-8080-exec-8] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:18:41.456 [http-nio-8080-exec-8] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:18:41.456 [http-nio-8080-exec-8] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-07-17 18:18:41.466 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-07-17 18:18:41.468 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:41.468 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:41.471 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:41.471 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:51F75965F18DFC2332580E6B42B8E862
+2019-07-17 18:18:41.471 [http-nio-8080-exec-9] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:18:41.471 [http-nio-8080-exec-9] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:18:41.471 [http-nio-8080-exec-9] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-07-17 18:18:41.474 [http-nio-8080-exec-8] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-07-17 18:18:41.475 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:41.475 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:41.484 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:41.484 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:1EDA8020C63F4536770EE4F930AE478B
+2019-07-17 18:18:41.485 [http-nio-8080-exec-10] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:18:41.485 [http-nio-8080-exec-10] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:18:41.485 [http-nio-8080-exec-10] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-07-17 18:18:41.494 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:41.495 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:FFDC41517CCCEDB0D7E86475F5BAF698
+2019-07-17 18:18:41.495 [http-nio-8080-exec-3] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:18:41.497 [http-nio-8080-exec-9] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-07-17 18:18:41.500 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:41.500 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:41.504 [http-nio-8080-exec-10] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:18:41.506 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:41.506 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:41.523 [http-nio-8080-exec-3] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:18:41.523 [http-nio-8080-exec-3] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-07-17 18:18:41.549 [http-nio-8080-exec-3] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:18:41.552 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:41.552 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:41.578 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:41.578 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:6A681CBB53D7B588F6061D4BBE241C38
+2019-07-17 18:18:41.578 [http-nio-8080-exec-1] INFO  org.fh.api.controller.user.UserLoginController - 011Mnnfi0un8Hp1Ua9gi0qMpfi0MnnfD
+2019-07-17 18:18:41.800 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:41.800 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:56.704 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:56.705 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:D8509D28BF43720118D2E479BF398577
+2019-07-17 18:18:56.705 [http-nio-8080-exec-5] INFO  org.fh.api.controller.user.UserLoginController - 011HSIV61QR2PM1xZJW61s2sV61HSIVm
+2019-07-17 18:18:56.825 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:56.825 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:56.952 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:56.953 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:9A1F08D1D6C688F89CA95E2E5AACFAA5
+2019-07-17 18:18:56.953 [http-nio-8080-exec-4] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:18:56.953 [http-nio-8080-exec-4] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:18:56.953 [http-nio-8080-exec-4] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-07-17 18:18:56.966 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:56.966 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:F2020724AE2423E34668479348AF74E1
+2019-07-17 18:18:56.966 [http-nio-8080-exec-6] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-07-17 18:18:56.967 [http-nio-8080-exec-6] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-07-17 18:18:56.967 [http-nio-8080-exec-6] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-07-17 18:18:56.969 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:56.969 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:FCC41CBCB4D87A5CE3E3E1C21914EB1C
+2019-07-17 18:18:56.970 [http-nio-8080-exec-2] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-07-17 18:18:56.971 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-07-17 18:18:56.972 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-07-17 18:18:56.979 [http-nio-8080-exec-4] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-07-17 18:18:56.982 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:56.982 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:56.985 [http-nio-8080-exec-6] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-07-17 18:18:56.987 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:56.987 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:56.996 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-07-17 18:18:56.999 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:56.999 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:57.021 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:57.021 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:AA8DB9D67A2520F8DFA59CA13BE60639
+2019-07-17 18:18:57.021 [http-nio-8080-exec-7] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:18:57.022 [http-nio-8080-exec-7] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:18:57.023 [http-nio-8080-exec-7] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-07-17 18:18:57.047 [http-nio-8080-exec-7] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-07-17 18:18:57.049 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:57.049 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:57.059 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:57.059 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:27AB7946688FEB55BA16A672B6C87695
+2019-07-17 18:18:57.059 [http-nio-8080-exec-8] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:18:57.059 [http-nio-8080-exec-8] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:18:57.059 [http-nio-8080-exec-8] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-07-17 18:18:57.077 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:57.078 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:90345F8521E9F099B872C529E33262FD
+2019-07-17 18:18:57.078 [http-nio-8080-exec-9] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:18:57.078 [http-nio-8080-exec-9] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:18:57.078 [http-nio-8080-exec-9] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-07-17 18:18:57.083 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:18:57.083 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:E8810E04EDB66FCD9756AFE3EBD1CF8C
+2019-07-17 18:18:57.084 [http-nio-8080-exec-10] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:18:57.084 [http-nio-8080-exec-8] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-07-17 18:18:57.085 [http-nio-8080-exec-10] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:18:57.085 [http-nio-8080-exec-10] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-07-17 18:18:57.086 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:57.086 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:57.095 [http-nio-8080-exec-9] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:18:57.097 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:57.097 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:18:57.109 [http-nio-8080-exec-10] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:18:57.110 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:18:57.111 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:17.760 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:17.761 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:8F70DD188DD3EC6E7F7A830DF5AF35C8
+2019-07-17 18:19:17.761 [http-nio-8080-exec-3] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:19:17.761 [http-nio-8080-exec-3] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:19:17.761 [http-nio-8080-exec-3] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-07-17 18:19:17.773 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:17.774 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:DD7C28DDC86DDE8173D8C08685AB096F
+2019-07-17 18:19:17.774 [http-nio-8080-exec-1] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-07-17 18:19:17.774 [http-nio-8080-exec-1] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-07-17 18:19:17.774 [http-nio-8080-exec-1] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-07-17 18:19:17.786 [http-nio-8080-exec-3] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-07-17 18:19:17.788 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:17.788 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:17.796 [http-nio-8080-exec-1] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-07-17 18:19:17.800 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:17.800 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:17.840 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:17.840 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:ECDF3B4F29078132E8890AA558C859FA
+2019-07-17 18:19:17.840 [http-nio-8080-exec-5] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-07-17 18:19:17.840 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-07-17 18:19:17.841 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-07-17 18:19:17.859 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-07-17 18:19:17.860 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:17.860 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:17.862 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:17.863 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:251C564A3B0343B0439B66905F1B36E0
+2019-07-17 18:19:17.863 [http-nio-8080-exec-4] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:19:17.863 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:19:17.863 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-07-17 18:19:17.873 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:17.873 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:40998390D67164C9057B9D67B48B36ED
+2019-07-17 18:19:17.873 [http-nio-8080-exec-6] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:19:17.873 [http-nio-8080-exec-6] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:19:17.873 [http-nio-8080-exec-6] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-07-17 18:19:17.882 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-07-17 18:19:17.885 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:17.885 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:17.892 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:17.892 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:9F35385F37AC2251EE5D93226060FD16
+2019-07-17 18:19:17.893 [http-nio-8080-exec-2] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:19:17.893 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:19:17.893 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-07-17 18:19:17.899 [http-nio-8080-exec-6] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-07-17 18:19:17.902 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:17.902 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:17.906 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:17.906 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:F78BDB3BCE228F3DC34D87D0929C6DCD
+2019-07-17 18:19:17.906 [http-nio-8080-exec-7] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:19:17.907 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:19:17.907 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-07-17 18:19:17.910 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:19:17.912 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:17.912 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:17.932 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:19:17.933 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:17.934 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:18.033 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:18.033 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:2280EDC6E1EEF855C84C2EDD32F5B318
+2019-07-17 18:19:18.033 [http-nio-8080-exec-8] INFO  org.fh.api.controller.user.UserLoginController - 061zS9P41saQ1U1L62P41HC5P41zS9PQ
+2019-07-17 18:19:18.273 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:18.273 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:41.649 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:41.650 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:707F93F68A5D6C10512BD01D05445083
+2019-07-17 18:19:41.650 [http-nio-8080-exec-9] INFO  org.fh.api.controller.user.UserLoginController - 071iy3jd0CJpjA1RDNhd0byZid0iy3jM
+2019-07-17 18:19:41.853 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:41.854 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:91432DAF263769C09C3C5BB834DA7025
+2019-07-17 18:19:41.854 [http-nio-8080-exec-10] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:19:41.855 [http-nio-8080-exec-10] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:19:41.856 [http-nio-8080-exec-10] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-07-17 18:19:41.867 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:41.867 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:01453F7E92BF8EDEC00407403FC61BA6
+2019-07-17 18:19:41.868 [http-nio-8080-exec-3] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-07-17 18:19:41.868 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-07-17 18:19:41.869 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-07-17 18:19:41.879 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:41.880 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:BB7D2A52DD48EE91055AE8ADC7285FFC
+2019-07-17 18:19:41.880 [http-nio-8080-exec-1] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-07-17 18:19:41.880 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-07-17 18:19:41.880 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-07-17 18:19:41.885 [http-nio-8080-exec-10] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-07-17 18:19:41.887 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-07-17 18:19:41.888 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:41.888 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:41.889 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:41.890 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:41.905 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-07-17 18:19:41.907 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:41.908 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:41.932 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:41.932 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:41.950 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:41.951 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:39F1AC758A59CADE8A9112025506BA43
+2019-07-17 18:19:41.951 [http-nio-8080-exec-5] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:19:41.951 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:19:41.951 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-07-17 18:19:41.968 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:41.968 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:D0138E3EBAD537D6E87A205F42B136B6
+2019-07-17 18:19:41.968 [http-nio-8080-exec-4] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:19:41.969 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:19:41.969 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-07-17 18:19:41.976 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-07-17 18:19:41.978 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:41.978 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:41.978 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:41.978 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:BAC64294D88691E26A1A2B9D6DD2EECE
+2019-07-17 18:19:41.978 [http-nio-8080-exec-6] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:19:41.978 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:19:41.979 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-07-17 18:19:41.987 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-07-17 18:19:41.989 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:41.989 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:41.992 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:41.992 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:96CD922F8D4105C12B53AFA9C86AED54
+2019-07-17 18:19:41.992 [http-nio-8080-exec-2] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:19:41.993 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:19:41.993 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-07-17 18:19:42.002 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:19:42.003 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:42.003 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:42.011 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:19:42.012 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:42.012 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:43.827 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:43.828 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:19CDF4408F24464BF7BAC0FF5DF9E745
+2019-07-17 18:19:43.829 [http-nio-8080-exec-7] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:19:43.829 [http-nio-8080-exec-7] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:19:43.829 [http-nio-8080-exec-7] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-07-17 18:19:43.848 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:43.848 [http-nio-8080-exec-7] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-07-17 18:19:43.848 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:EE979F8FD5C82FB11EE7435A42F75B65
+2019-07-17 18:19:43.849 [http-nio-8080-exec-8] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-07-17 18:19:43.849 [http-nio-8080-exec-8] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-07-17 18:19:43.850 [http-nio-8080-exec-8] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-07-17 18:19:43.851 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:43.851 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:43.867 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:43.867 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:81519A70E2B1CAFC7D1ED3589F5B1AE3
+2019-07-17 18:19:43.868 [http-nio-8080-exec-10] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-07-17 18:19:43.868 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-07-17 18:19:43.868 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-07-17 18:19:43.869 [http-nio-8080-exec-8] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-07-17 18:19:43.871 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:43.871 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:43.893 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-07-17 18:19:43.895 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:43.895 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:946B80338172623CA8F9C61A27E1DF3F
+2019-07-17 18:19:43.895 [http-nio-8080-exec-3] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:19:43.895 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:43.895 [http-nio-8080-exec-3] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:19:43.895 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:43.896 [http-nio-8080-exec-3] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-07-17 18:19:43.920 [http-nio-8080-exec-3] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-07-17 18:19:43.921 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:43.921 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:43.949 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:43.950 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:C5085161F838E89A11A805C7DC076DB3
+2019-07-17 18:19:43.950 [http-nio-8080-exec-1] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-07-17 18:19:43.950 [http-nio-8080-exec-1] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-07-17 18:19:43.950 [http-nio-8080-exec-1] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-07-17 18:19:43.957 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:43.958 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:6C5AFE33C106E766BE6C93420791761C
+2019-07-17 18:19:43.958 [http-nio-8080-exec-9] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:19:43.958 [http-nio-8080-exec-9] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:19:43.958 [http-nio-8080-exec-9] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-07-17 18:19:43.969 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:43.969 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:D330BBEBCDB48FC82A2F33790C4B41A2
+2019-07-17 18:19:43.969 [http-nio-8080-exec-5] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:19:43.970 [http-nio-8080-exec-5] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:19:43.970 [http-nio-8080-exec-5] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-07-17 18:19:43.975 [http-nio-8080-exec-1] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-07-17 18:19:43.976 [http-nio-8080-exec-9] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:19:43.977 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:43.977 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:43.978 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:43.978 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:43.994 [http-nio-8080-exec-5] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-07-17 18:19:43.996 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:43.996 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:44.046 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:44.047 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:28C04B65EB83F9B6C7C3582A80F36849
+2019-07-17 18:19:44.047 [http-nio-8080-exec-4] INFO  org.fh.api.controller.user.UserLoginController - 001WAnaD1d58M40nyuaD1VFsaD1WAnaE
+2019-07-17 18:19:44.195 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:44.195 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:45.524 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:45.525 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:2A08BA7380B5E212B9AAB59CEA981FF0
+2019-07-17 18:19:45.525 [http-nio-8080-exec-6] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-07-17 18:19:45.525 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-07-17 18:19:45.526 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: lifecirclebanner(String)
+2019-07-17 18:19:45.526 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:45.526 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:1F2214078D25DA8E82D1514B933B5342
+2019-07-17 18:19:45.526 [http-nio-8080-exec-2] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleRecommend
+2019-07-17 18:19:45.527 [http-nio-8080-exec-2] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleRecommend - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a WHERE a.RECOMMENDATION = 'yes' 
+2019-07-17 18:19:45.527 [http-nio-8080-exec-2] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleRecommend - ==> Parameters: 
+2019-07-17 18:19:45.544 [http-nio-8080-exec-2] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleRecommend - <==      Total: 2
+2019-07-17 18:19:45.545 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:45.545 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:45.550 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 3
+2019-07-17 18:19:45.552 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:45.552 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:45.586 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:45.587 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:918CC9AE1DDCF40393A7FAE25B596ACD
+2019-07-17 18:19:45.587 [http-nio-8080-exec-7] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:19:45.587 [http-nio-8080-exec-7] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:19:45.587 [http-nio-8080-exec-7] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: LC_ZFXX(String)
+2019-07-17 18:19:45.593 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:45.593 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:BC889846DC7772A1F4B2216C87179802
+2019-07-17 18:19:45.593 [http-nio-8080-exec-8] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:19:45.594 [http-nio-8080-exec-8] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:19:45.594 [http-nio-8080-exec-8] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: LC_ZFSW(String)
+2019-07-17 18:19:45.601 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:45.601 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:0F4B64F1E6ADFC599B89179308504AA3
+2019-07-17 18:19:45.602 [http-nio-8080-exec-10] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-07-17 18:19:45.602 [http-nio-8080-exec-10] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-07-17 18:19:45.602 [http-nio-8080-exec-10] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: LC_ZFLP(String)
+2019-07-17 18:19:45.611 [http-nio-8080-exec-8] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 0
+2019-07-17 18:19:45.612 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:45.612 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:45.612 [http-nio-8080-exec-7] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-07-17 18:19:45.615 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:45.615 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:45.626 [http-nio-8080-exec-10] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 0
+2019-07-17 18:19:45.627 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:45.628 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:46.659 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-07-17 18:19:46.660 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:67BC1D38AC7CC4D04FCBFE6FEBEF3739
+2019-07-17 18:19:46.660 [http-nio-8080-exec-3] INFO  o.f.a.c.servicesitem.ServiceitemController - categoryList
+2019-07-17 18:19:46.661 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.661 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 6a19655d869d45e190e61c7fe46d6405(String)
+2019-07-17 18:19:46.684 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 7
+2019-07-17 18:19:46.685 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.685 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 96ba4ed9b2524eeaa887ab0ea52267b3(String)
+2019-07-17 18:19:46.709 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 3
+2019-07-17 18:19:46.709 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.709 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 2461bf2761484aebbe036e55debc47d2(String)
+2019-07-17 18:19:46.735 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 7
+2019-07-17 18:19:46.735 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.736 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 142bcd7e959d461f9291ee5c9cad229a(String)
+2019-07-17 18:19:46.759 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:46.760 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.760 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 44eb340de88e4321aea4a4c69ae0670a(String)
+2019-07-17 18:19:46.783 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:46.784 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.784 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 5741eb38ca7a45a0ba932ef864c0f615(String)
+2019-07-17 18:19:46.808 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:46.809 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.809 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 6c77cad8486c48f197073434f1cdc527(String)
+2019-07-17 18:19:46.832 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:46.833 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.833 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: dfc9d9b0a33d4772acc08a7e898053d2(String)
+2019-07-17 18:19:46.856 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:46.857 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.857 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 242ccd0073914d92bd870ed19ae78eec(String)
+2019-07-17 18:19:46.882 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:46.882 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.882 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 6b4fb86095e140dfbaf74c4c2dcb93f1(String)
+2019-07-17 18:19:46.905 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:46.906 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.906 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: cefbd79785ae406794697cff4550f722(String)
+2019-07-17 18:19:46.930 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 5
+2019-07-17 18:19:46.930 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.930 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: d3b5bec2b3344da4ba01a73aa5a23591(String)
+2019-07-17 18:19:46.953 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:46.953 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.954 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: d5c5bd8fffce4f74819316f7e46a193e(String)
+2019-07-17 18:19:46.977 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:46.977 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:46.978 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 83447c077b03481bbabc631eddf56cb1(String)
+2019-07-17 18:19:47.002 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.002 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.002 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 6f27579b27df488090fcf27acc693f94(String)
+2019-07-17 18:19:47.026 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.027 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.027 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 68474ca7c3fe486989eabdeff46fdfb7(String)
+2019-07-17 18:19:47.050 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.050 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.050 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 9e28a6bba132463eac2f74ee41c2117c(String)
+2019-07-17 18:19:47.074 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 4
+2019-07-17 18:19:47.074 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.074 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: da915cf3566344b49c2cee1a8ca25536(String)
+2019-07-17 18:19:47.097 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.098 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.098 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 1a69ce33de4e4e20bf6c5ceb4b3b085f(String)
+2019-07-17 18:19:47.122 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.122 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.123 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 8d4402df778b4f169d3c5f8277c8a21a(String)
+2019-07-17 18:19:47.146 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.147 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.147 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 4c09f23aa84145709e29ffaf4021a536(String)
+2019-07-17 18:19:47.170 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.171 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.172 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 47fa9a1aa8b6430ca3a1cf5b4b31c076(String)
+2019-07-17 18:19:47.198 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 7
+2019-07-17 18:19:47.198 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.199 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: a957f2f3d51e436eae9572113fd6ac10(String)
+2019-07-17 18:19:47.223 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.224 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.224 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 2591412e74e14dbebda9276f954dbb12(String)
+2019-07-17 18:19:47.249 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.250 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.250 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: fd060352a1854b06b388e5e6fb843552(String)
+2019-07-17 18:19:47.274 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.275 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.275 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 0ca8718b177a4bfd9ba115a7d096389a(String)
+2019-07-17 18:19:47.298 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.299 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.299 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: e0a1829f4d044584bfda8460b945374b(String)
+2019-07-17 18:19:47.322 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.322 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.322 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 664952e864964836a9cea2b661710640(String)
+2019-07-17 18:19:47.346 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.346 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.346 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 6bac810922a34d98a2449b077c6882bb(String)
+2019-07-17 18:19:47.369 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.370 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.370 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: e0c587565df4400bbf17b05cc0cb8a74(String)
+2019-07-17 18:19:47.395 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 12
+2019-07-17 18:19:47.395 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.396 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: c76917e5f2bb4dfda4e2c8591b7ab6cc(String)
+2019-07-17 18:19:47.419 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.419 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.420 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 6669dbca86f24e48b30472efcd0d46ea(String)
+2019-07-17 18:19:47.443 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.444 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.444 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: fb863fd65c85459e952c98b3e66b00f2(String)
+2019-07-17 18:19:47.468 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.469 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.469 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 3415ab7a591245fdabd988621ff03fc9(String)
+2019-07-17 18:19:47.493 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.493 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.494 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 8d0a123878b74bb6b4a81f1dcf6b5d32(String)
+2019-07-17 18:19:47.519 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.520 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.520 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 532c77b766b148af92f044f93fbcdaed(String)
+2019-07-17 18:19:47.543 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.544 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.544 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 1cf5c9cb33fa4d2ea66b6aa5ba06ffa2(String)
+2019-07-17 18:19:47.567 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.567 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.567 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: ab5b7e16575646d0bb25d7991c353dcb(String)
+2019-07-17 18:19:47.590 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.591 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.591 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 087d31e816b1461f810ef99c2bfe7643(String)
+2019-07-17 18:19:47.614 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.615 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.615 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: c12c4e218e2f4af1a4ce38877df0950a(String)
+2019-07-17 18:19:47.638 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.639 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.639 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 11ed2810782b4a81b61280b86383128a(String)
+2019-07-17 18:19:47.663 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.663 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.663 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 2ff08a5ef9924b129f8ad29cbe84eff0(String)
+2019-07-17 18:19:47.686 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.687 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.687 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 2b61060d056a4bc1ad8a453d0529bb23(String)
+2019-07-17 18:19:47.712 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 10
+2019-07-17 18:19:47.712 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.712 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: e50fe97d10c8408abb2a2d8b600e9c19(String)
+2019-07-17 18:19:47.735 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.735 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.736 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 1b098d7daa9645b7a32595057b2e3789(String)
+2019-07-17 18:19:47.759 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.760 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.760 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 56f02b8498764865bfe1b58090fcd203(String)
+2019-07-17 18:19:47.784 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.785 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.785 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: bf10edf55f7944cba926ea855293549d(String)
+2019-07-17 18:19:47.808 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.808 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.809 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 08ca59064a03491882c8342e9a2a779a(String)
+2019-07-17 18:19:47.832 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.832 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.833 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 6d7f25e9e7ea41a495fed27c6c47e853(String)
+2019-07-17 18:19:47.857 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.858 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.859 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: f2ec5fdba4f44d839bf16be3643f65bc(String)
+2019-07-17 18:19:47.882 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.883 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.883 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 7f4883782e8d41308bb6a7148d9af1c4(String)
+2019-07-17 18:19:47.907 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.907 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.907 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 9d59247545684c558fb3bf1feb37aae7(String)
+2019-07-17 18:19:47.930 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.931 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.931 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: e32602e79004405db49e9ce7eea3b964(String)
+2019-07-17 18:19:47.955 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:47.955 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.956 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 7b6dc145638f4ed89253558c5e14b881(String)
+2019-07-17 18:19:47.979 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 4
+2019-07-17 18:19:47.979 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:47.979 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: d98e4aca0dc74dbdb4d76a6b5da1eaa5(String)
+2019-07-17 18:19:48.003 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 3
+2019-07-17 18:19:48.003 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.003 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 0cb7386ec1c442d39d202e07c168e4b2(String)
+2019-07-17 18:19:48.027 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.027 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.027 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 61f8fea33f974492bc74d227f0d62b8f(String)
+2019-07-17 18:19:48.051 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.051 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.052 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: bac0eddf5003448783470c0d88b7ff1e(String)
+2019-07-17 18:19:48.075 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.075 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.075 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 8b68b298effe40b4a8ac4381b0cedcc9(String)
+2019-07-17 18:19:48.099 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.099 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.100 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 13e4c51a881d484ebc82b900b446ed5e(String)
+2019-07-17 18:19:48.123 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.123 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.123 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 70afbc127c2c4103a0eaf38d87938014(String)
+2019-07-17 18:19:48.147 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.147 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.147 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: dbc3d724ef434200b949712298f4a431(String)
+2019-07-17 18:19:48.173 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 9
+2019-07-17 18:19:48.173 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.174 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: ebf8bf9c554c4bc78388cc3e8ba44d59(String)
+2019-07-17 18:19:48.197 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 2
+2019-07-17 18:19:48.198 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.198 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 8bbc8942636d4b9390d555d3f8bdfd1f(String)
+2019-07-17 18:19:48.222 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.222 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.223 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 52718dc3c1c9485c958cbfc469d38428(String)
+2019-07-17 18:19:48.247 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.247 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.248 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 0f510db55a434b84a9d8954678ae2af6(String)
+2019-07-17 18:19:48.271 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.272 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.272 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 5ce122968bcf4b97bb7835bc1417ecb4(String)
+2019-07-17 18:19:48.294 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.294 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.295 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: b24293746b054184a79ba22ce229416d(String)
+2019-07-17 18:19:48.318 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.318 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.319 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 026d986c230247caaccfa5967cb7442f(String)
+2019-07-17 18:19:48.342 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.343 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.344 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: d2987977cffa484b94797af7c2e985a6(String)
+2019-07-17 18:19:48.367 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.369 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.369 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 3dc7878234784b8ba554b68056aff1eb(String)
+2019-07-17 18:19:48.392 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.393 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.394 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 72f0ffeacd284b218f543d6fe571c2f9(String)
+2019-07-17 18:19:48.417 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.418 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.419 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 5b627ea995d147949e692050f2cdff47(String)
+2019-07-17 18:19:48.442 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.443 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.444 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: eebddde5f7e341238a4251bab8d01b66(String)
+2019-07-17 18:19:48.468 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 3
+2019-07-17 18:19:48.469 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.469 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 6ab4145d5f2f42288a48c7e06dedcc5c(String)
+2019-07-17 18:19:48.494 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 13
+2019-07-17 18:19:48.495 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.495 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: aa48ae50235d40bd954c683111443ac5(String)
+2019-07-17 18:19:48.519 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.519 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.520 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 57011c48016049dc953bdd4493b9fe9f(String)
+2019-07-17 18:19:48.544 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.544 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.545 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 6c56265a601f4da7b52a65b4a92c05f6(String)
+2019-07-17 18:19:48.569 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.570 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.570 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: a7f25ef1d241434f94adea30d036969b(String)
+2019-07-17 18:19:48.596 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.597 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.597 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 97bbdcfc15f94c45ac52c2b1752c5de6(String)
+2019-07-17 18:19:48.621 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.622 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.622 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 557b2c3f5f9245628fce01bfbf8fc2a0(String)
+2019-07-17 18:19:48.648 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.649 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.650 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: c6768db2866344f09b27501d1808786b(String)
+2019-07-17 18:19:48.673 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.674 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.674 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 512813e37f1548bc9e89028b7297cf3e(String)
+2019-07-17 18:19:48.698 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.698 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.698 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 0d7f65678e0c44dca59908de105bf7bc(String)
+2019-07-17 18:19:48.722 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.722 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.722 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: ecb46bac53bf4bde8be4c6233c1d92b0(String)
+2019-07-17 18:19:48.745 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.745 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.745 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 14e95e6904204fcf9a7f44271b77d407(String)
+2019-07-17 18:19:48.768 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.768 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.768 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: e9231dab039c46abbf09049f30feef90(String)
+2019-07-17 18:19:48.791 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.791 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.791 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 791cbe8c21c34920b4632618bb29a10c(String)
+2019-07-17 18:19:48.814 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.814 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.814 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 4e235c0ca0c7474abc93b32bb701093b(String)
+2019-07-17 18:19:48.838 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 8
+2019-07-17 18:19:48.839 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.839 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 9b84285059a441c0a4344056f5f5ff7f(String)
+2019-07-17 18:19:48.863 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.863 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.863 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: c3a266cfc92a4e4bb459b620991779b9(String)
+2019-07-17 18:19:48.887 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.888 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.889 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 965b01cb211243de88fc1a59d72ffa46(String)
+2019-07-17 18:19:48.912 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.912 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.913 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 7aa7dcd03e224736bd0423d4d66cd822(String)
+2019-07-17 18:19:48.937 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.938 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.938 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: c4c86f7a24db458783c379f9120ded28(String)
+2019-07-17 18:19:48.962 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.963 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.963 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 5e49504937aa449faf6c3b2702ec4edf(String)
+2019-07-17 18:19:48.987 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:48.987 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:48.987 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 9c755243c35c4cbe80174f9610245795(String)
+2019-07-17 18:19:49.011 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:49.012 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:49.012 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 4b72c52990ec42bd8247523c196f7558(String)
+2019-07-17 18:19:49.036 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:49.037 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:49.037 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: dedf3debb9024c6faf602badb54a1dcc(String)
+2019-07-17 18:19:49.061 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 4
+2019-07-17 18:19:49.062 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:49.062 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 1d19e4dcff084e86886920c0925d5239(String)
+2019-07-17 18:19:49.086 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:49.086 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:49.087 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 96525a51165348dca4df57636cdc0c2b(String)
+2019-07-17 18:19:49.110 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:49.110 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:49.111 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: 72efb9a81a514416a13e1c04f9d09c5f(String)
+2019-07-17 18:19:49.135 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:49.136 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==>  Preparing: select a.DICTIONARIES_ID,a.`NAME`,a.NAME_EN,b.SERVICE_IMG,b.SERVICES_ID from sys_dictionaries a left join wx_applet_services b on(a.BIANMA = b.SERVICE_TYPE) where PARENT_ID = ? order by a.ORDER_BY 
+2019-07-17 18:19:49.136 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - ==> Parameters: ad42892dcfde4ad092656eec53061e56(String)
+2019-07-17 18:19:49.160 [http-nio-8080-exec-3] DEBUG o.f.a.m.s.ServiceitemMapper.getCategoryList - <==      Total: 0
+2019-07-17 18:19:49.168 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-07-17 18:19:49.168 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-07-17 18:19:52.725 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-17 18:19:52.730 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

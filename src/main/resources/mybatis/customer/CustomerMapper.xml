@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.customer.CustomerMapper">
+	
+	<!--表名 -->
+	<sql id="tableName">
+		wx_applet_customer
+	</sql>
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.customer.Customer" >
+		<id column="CUSTOMER_ID" property="customerId"  />
+		<result column="OPEN_ID" property="openId"  />
+		<result column="CUST_NAME" property="custName"  />
+		<result column="TEL" property="tel"  />
+		<result column="BIRTHDAY" property="birthday"  />
+		<result column="COUNTRY_TEL_CODE" property="countryTelCode"  />
+		<result column="EMAIL" property="email"  />
+	</resultMap>
+
+	<!-- 字段用于新增 -->
+	<sql id="Field">
+		CUSTOMER_ID,
+		OPEN_ID,
+		CUST_NAME,
+		TEL,
+		BIRTHDAY,
+		COUNTRY_TEL_CODE,
+		EMAIL
+	</sql>
+	<!-- 字段值 -->
+	<sql id="FieldValue">
+		#{customerId},
+		#{openId},
+		#{custName},
+		#{tel},
+		#{birthday},
+		#{countryTelCode},
+		#{email}
+	</sql>
+
+
+	<!--根据openId查询customer-->
+	<select id="getCustomerByOpenId" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+		CUSTOMER_ID,
+		OPEN_ID,
+		CUST_NAME,
+		TEL,
+		BIRTHDAY,
+		COUNTRY_TEL_CODE,
+		EMAIL
+		FROM
+		wx_applet_customer
+		WHERE
+		OPEN_ID=#{openId}
+	</select>
+
+	<!--根据openId查询customer-->
+	<select id="getCustomerByCustId" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+		CUSTOMER_ID,
+		OPEN_ID,
+		CUST_NAME,
+		TEL,
+		BIRTHDAY,
+		COUNTRY_TEL_CODE,
+		EMAIL
+		FROM
+		wx_applet_customer
+		WHERE
+		CUSTOMER_ID=#{param}
+	</select>
+
+
+	<!--插入新的customer-->
+	<insert id="saveCustomer" parameterType="org.fh.api.pojo.customer.Customer">
+		insert into
+		<include refid="tableName"></include>
+		(
+		<include refid="Field"></include>
+		) values (
+		<include refid="FieldValue"></include>
+		)
+	</insert>
+
+
+
+	<!-- 修改 -->
+	<update id="updataCustomerByOpenid"  parameterType="org.fh.api.pojo.customer.Customer">
+		update
+		<include refid="tableName"></include>
+		set
+		CUST_NAME = #{custName},
+		TEL = #{tel},
+		BIRTHDAY = #{birthday},
+		COUNTRY_TEL_CODE = #{countryTelCode},
+		EMAIL = #{email}
+		where
+		OPEN_ID = #{openId}
+	</update>
+
+</mapper>

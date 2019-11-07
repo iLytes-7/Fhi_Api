@@ -1,0 +1,774 @@
+2019-08-13 10:14:48.892 [restartedMain] INFO  org.fh.api.FhiApiApplication - Starting FhiApiApplication on YK219ZAO71X6ZV0 with PID 13972 (C:\Dysprep\svn\bin\svn\fh_api\target\classes started by Administrator in C:\Dysprep\svn\bin\svn\fh_api)
+2019-08-13 10:14:48.894 [restartedMain] INFO  org.fh.api.FhiApiApplication - No active profile set, falling back to default profiles: default
+2019-08-13 10:14:48.952 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-13 10:14:48.953 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-13 10:14:50.627 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-08-13 10:14:50.643 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-13 10:14:50.652 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-13 10:14:50.652 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-08-13 10:14:50.660 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2019-08-13 10:14:50.769 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-13 10:14:50.769 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1816 ms
+2019-08-13 10:14:52.018 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-13 10:14:52.364 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-08-13 10:14:52.396 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-08-13 10:14:52.424 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-13 10:14:52.427 [restartedMain] INFO  org.fh.api.FhiApiApplication - Started FhiApiApplication in 3.932 seconds (JVM running for 6.502)
+2019-08-13 10:15:03.568 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-13 10:15:03.568 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-13 10:15:03.577 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2019-08-13 10:15:03.609 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:03.609 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:03.612 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:BB7895346937DBE097C1A40CF927DD66
+2019-08-13 10:15:03.612 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:59B10AEF8D5677E904AB53D60B932CE5
+2019-08-13 10:15:03.857 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:03.859 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:F0AF30A302BBF620456A389B40AF7278
+2019-08-13 10:15:03.950 [http-nio-8080-exec-3] INFO  org.fh.api.controller.user.UserLoginController - 011evTtu1UE1Md0j26wu1NYOtu1evTt-
+2019-08-13 10:15:04.987 [http-nio-8080-exec-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-08-13 10:15:05.418 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:15:05.439 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:05.518 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:15:05.522 [http-nio-8080-exec-3] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:15:05.523 [http-nio-8080-exec-3] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 41700(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:05.583 [http-nio-8080-exec-3] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:15:05.623 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:05.624 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:08.989 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:08.990 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:F0AF30A302BBF620456A389B40AF7278
+2019-08-13 10:15:08.995 [http-nio-8080-exec-4] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:15:09.001 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:09.001 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:F0AF30A302BBF620456A389B40AF7278
+2019-08-13 10:15:09.003 [http-nio-8080-exec-5] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:15:09.005 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:15:09.005 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:09.046 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 4
+2019-08-13 10:15:09.046 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:15:09.047 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:09.051 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:09.052 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:09.077 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 0
+2019-08-13 10:15:09.079 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:09.079 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:09.308 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:09.308 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:15:09.309 [http-nio-8080-exec-6] INFO  org.fh.api.controller.user.UserLoginController - 021Tc96k2PTwzE03Qz6k25036k2Tc96D
+2019-08-13 10:15:09.444 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:15:09.444 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:09.475 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:15:09.476 [http-nio-8080-exec-6] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:15:09.477 [http-nio-8080-exec-6] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 41700(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:09.535 [http-nio-8080-exec-6] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:15:09.538 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:09.539 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:12.781 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:12.782 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:15:12.783 [http-nio-8080-exec-7] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:15:12.784 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:15:12.785 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: 654654asd564a56sd465as4d(String)
+2019-08-13 10:15:12.816 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:15:12.818 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:12.818 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:14.325 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:14.326 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:15:14.326 [http-nio-8080-exec-8] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:15:14.327 [http-nio-8080-exec-8] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:15:14.328 [http-nio-8080-exec-8] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:14.331 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:14.331 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:15:14.331 [http-nio-8080-exec-9] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:15:14.331 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:15:14.332 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:14.356 [http-nio-8080-exec-8] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 0
+2019-08-13 10:15:14.358 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:14.358 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:14.368 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 4
+2019-08-13 10:15:14.372 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:14.372 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:15.623 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:15.624 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:15:15.624 [http-nio-8080-exec-10] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:15:15.625 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:15:15.625 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: oyqwieyoquywoieuqwe(String)
+2019-08-13 10:15:15.656 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:15:15.658 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:15.658 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:16.946 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:16.946 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:15:16.947 [http-nio-8080-exec-2] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:15:16.947 [http-nio-8080-exec-2] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:15:16.947 [http-nio-8080-exec-2] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:16.949 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:16.950 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:15:16.950 [http-nio-8080-exec-1] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:15:16.950 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:15:16.950 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:16.977 [http-nio-8080-exec-2] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 0
+2019-08-13 10:15:16.979 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:16.979 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:16.985 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 4
+2019-08-13 10:15:16.988 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:16.988 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:18.110 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:18.111 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:15:18.111 [http-nio-8080-exec-3] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:15:18.111 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:15:18.112 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: 64a6sd4564a6sd8ad1(String)
+2019-08-13 10:15:18.140 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:15:18.143 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:18.144 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:20.609 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:20.609 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:15:20.610 [http-nio-8080-exec-5] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:15:20.610 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:15:20.611 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:20.613 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:15:20.614 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:15:20.614 [http-nio-8080-exec-4] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:15:20.614 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:15:20.614 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:15:20.640 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 0
+2019-08-13 10:15:20.641 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:20.641 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:15:20.654 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 4
+2019-08-13 10:15:20.657 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:15:20.657 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:16:43.701 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:16:43.701 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:16:43.702 [http-nio-8080-exec-8] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:16:43.724 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:16:43.724 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:73FD8780ACFBE1BA6AC593FAD5CE0E1B
+2019-08-13 10:16:43.725 [http-nio-8080-exec-9] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:16:43.744 [http-nio-8080-exec-8] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:16:43.745 [http-nio-8080-exec-8] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:16:43.758 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:16:43.759 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:16:43.780 [http-nio-8080-exec-8] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 4
+2019-08-13 10:16:43.782 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:16:43.782 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:16:43.788 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 0
+2019-08-13 10:16:43.790 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:16:43.790 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:16:43.830 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:16:43.830 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:16:43.831 [http-nio-8080-exec-10] INFO  org.fh.api.controller.user.UserLoginController - 0617iT5p1lLhkk0laN8p1EVQ5p17iT5a
+2019-08-13 10:16:44.110 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:16:44.111 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:16:44.145 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:16:44.147 [http-nio-8080-exec-10] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:16:44.149 [http-nio-8080-exec-10] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 41700(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:16:44.207 [http-nio-8080-exec-10] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:16:44.210 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:16:44.211 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:16:47.080 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:16:47.081 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:16:47.081 [http-nio-8080-exec-2] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:16:47.082 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:16:47.082 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: oyqwieyoquywoieuqwe(String)
+2019-08-13 10:16:47.113 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:16:47.114 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:16:47.114 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:16:48.730 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:16:48.730 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:16:48.731 [http-nio-8080-exec-1] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:16:48.731 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:16:48.732 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:16:48.734 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:16:48.735 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:16:48.735 [http-nio-8080-exec-3] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:16:48.736 [http-nio-8080-exec-3] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:16:48.736 [http-nio-8080-exec-3] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:16:48.765 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 4
+2019-08-13 10:16:48.766 [http-nio-8080-exec-3] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 0
+2019-08-13 10:16:48.767 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:16:48.767 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:16:48.767 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:16:48.767 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:16:52.802 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:16:52.803 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:16:52.804 [http-nio-8080-exec-5] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:16:52.805 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:16:52.805 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: oyqwieyoquywoieuqwe(String)
+2019-08-13 10:16:52.837 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:16:52.840 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:16:52.841 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:16:56.092 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:16:56.093 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:16:56.098 [http-nio-8080-exec-4] INFO  org.fh.api.controller.bill.BillController - payBillByJiFen
+2019-08-13 10:16:56.140 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:16:56.140 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:16:56.171 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:16:56.171 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:16:56.172 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: oyqwieyoquywoieuqwe(String)
+2019-08-13 10:16:56.202 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:16:56.203 [http-nio-8080-exec-4] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:16:56.203 [http-nio-8080-exec-4] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 40900.00(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:16:56.260 [http-nio-8080-exec-4] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:16:56.261 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.updateBillStatus - ==>  Preparing: UPDATE wx_applet_bill SET IS_NEED_INVOICE = ?, TITLE = ?, TAX_NO = ?, PAYMENT_TYPE = ?, PAY_STATUS = ?, STATUS = ? WHERE BILL_ID = ? 
+2019-08-13 10:16:56.261 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.updateBillStatus - ==> Parameters: 否(String), (String), (String), 积分支付(String), ps_03(String), OS_03(String), oyqwieyoquywoieuqwe(String)
+2019-08-13 10:16:56.317 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.updateBillStatus - <==    Updates: 1
+2019-08-13 10:16:56.406 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:16:56.406 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:16:56.466 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:16:56.467 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:16:56.467 [http-nio-8080-exec-6] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:16:56.467 [http-nio-8080-exec-6] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:16:56.467 [http-nio-8080-exec-6] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:16:56.468 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:16:56.468 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:16:56.468 [http-nio-8080-exec-7] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:16:56.469 [http-nio-8080-exec-7] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:16:56.469 [http-nio-8080-exec-7] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:16:56.501 [http-nio-8080-exec-7] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 1
+2019-08-13 10:16:56.502 [http-nio-8080-exec-6] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 3
+2019-08-13 10:16:56.503 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:16:56.503 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:16:56.505 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:16:56.505 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:17:14.456 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:17:14.457 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:17:14.457 [http-nio-8080-exec-8] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:17:14.458 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:17:14.458 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: oyqwieyoquywoieuqwe(String)
+2019-08-13 10:17:14.489 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:17:14.492 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:17:14.492 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:17:24.009 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:17:24.010 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:17:24.011 [http-nio-8080-exec-9] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:17:24.011 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:17:24.012 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:17:24.023 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:17:24.024 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:17:24.029 [http-nio-8080-exec-10] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:17:24.030 [http-nio-8080-exec-10] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:17:24.030 [http-nio-8080-exec-10] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:17:24.046 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 3
+2019-08-13 10:17:24.047 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:17:24.048 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:17:24.060 [http-nio-8080-exec-10] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 1
+2019-08-13 10:17:24.063 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:17:24.063 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:17:37.838 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:17:37.839 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:17:37.839 [http-nio-8080-exec-2] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:17:37.839 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:17:37.840 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: 654654asd564a56sd465as4d(String)
+2019-08-13 10:17:37.871 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:17:37.873 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:17:37.873 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:17:50.491 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:17:50.492 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:17:50.492 [http-nio-8080-exec-1] INFO  org.fh.api.controller.bill.BillController - payBillByJiFen
+2019-08-13 10:17:50.520 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:17:50.520 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:17:50.549 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:17:50.550 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:17:50.551 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: 654654asd564a56sd465as4d(String)
+2019-08-13 10:17:50.582 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:17:50.582 [http-nio-8080-exec-1] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:17:50.584 [http-nio-8080-exec-1] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900.00(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:17:50.640 [http-nio-8080-exec-1] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:17:50.641 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.bill.BillMapper.updateBillStatus - ==>  Preparing: UPDATE wx_applet_bill SET IS_NEED_INVOICE = ?, TITLE = ?, TAX_NO = ?, PAYMENT_TYPE = ?, PAY_STATUS = ?, STATUS = ? WHERE BILL_ID = ? 
+2019-08-13 10:17:50.642 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.bill.BillMapper.updateBillStatus - ==> Parameters: 是(String), +5+3(String), 635464(String), 积分支付(String), ps_03(String), OS_03(String), 654654asd564a56sd465as4d(String)
+2019-08-13 10:17:50.699 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.bill.BillMapper.updateBillStatus - <==    Updates: 1
+2019-08-13 10:17:50.785 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:17:50.785 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:17:50.857 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:17:50.857 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:17:50.858 [http-nio-8080-exec-3] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:17:50.858 [http-nio-8080-exec-3] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:17:50.859 [http-nio-8080-exec-3] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:17:50.860 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:17:50.860 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:17:50.860 [http-nio-8080-exec-5] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:17:50.860 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:17:50.861 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:17:50.891 [http-nio-8080-exec-3] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:17:50.892 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:17:50.892 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:17:50.894 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:17:50.896 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:17:50.896 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:18:00.216 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:18:00.216 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:18:00.217 [http-nio-8080-exec-4] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:18:00.217 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:18:00.217 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: 64a6sd4564a6sd8ad1(String)
+2019-08-13 10:18:00.250 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:18:00.251 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:18:00.252 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:24:36.442 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:24:36.443 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:24:36.443 [http-nio-8080-exec-8] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:24:36.453 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:24:36.453 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:349C70631328C35E196F1E6348D15BA5
+2019-08-13 10:24:36.454 [http-nio-8080-exec-9] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:24:37.066 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:24:37.066 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:D0C3F5C5B7FA52EDCD2D7E1D5C0EF380
+2019-08-13 10:24:37.067 [http-nio-8080-exec-10] INFO  org.fh.api.controller.user.UserLoginController - 001CvV5G03Vqxc2lxS8G018T5G0CvV5r
+2019-08-13 10:24:37.582 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:24:37.583 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:24:37.614 [http-nio-8080-exec-10] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:24:37.615 [http-nio-8080-exec-8] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:24:37.616 [http-nio-8080-exec-8] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:24:37.656 [http-nio-8080-exec-8] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:24:37.657 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:24:37.658 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:24:37.661 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:24:37.662 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:24:37.691 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:24:37.692 [http-nio-8080-exec-10] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:24:37.694 [http-nio-8080-exec-10] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:24:37.695 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:24:37.695 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:24:37.751 [http-nio-8080-exec-10] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:24:37.752 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:24:37.752 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:24:44.485 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:24:44.486 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:D0C3F5C5B7FA52EDCD2D7E1D5C0EF380
+2019-08-13 10:24:44.487 [http-nio-8080-exec-2] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:24:44.487 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:24:44.488 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: 64a6sd4564a6sd8ad1(String)
+2019-08-13 10:24:44.519 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:24:44.520 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:24:44.520 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:25:24.229 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:25:24.229 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:D0C3F5C5B7FA52EDCD2D7E1D5C0EF380
+2019-08-13 10:25:24.230 [http-nio-8080-exec-1] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:25:24.230 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:25:24.231 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:25:24.236 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:25:24.236 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:D0C3F5C5B7FA52EDCD2D7E1D5C0EF380
+2019-08-13 10:25:24.236 [http-nio-8080-exec-3] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:25:24.237 [http-nio-8080-exec-3] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:25:24.237 [http-nio-8080-exec-3] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:25:24.264 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:25:24.266 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:25:24.266 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:25:24.268 [http-nio-8080-exec-3] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:25:24.270 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:25:24.270 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:25:24.679 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:25:24.680 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:EA02592F0B38387D3181D502C60883B7
+2019-08-13 10:25:24.681 [http-nio-8080-exec-5] INFO  org.fh.api.controller.user.UserLoginController - 0019LsoG06MKgc2VNzqG0kcvoG09LsoX
+2019-08-13 10:25:24.905 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:25:24.906 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:25:24.936 [http-nio-8080-exec-5] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:25:24.936 [http-nio-8080-exec-5] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:25:24.937 [http-nio-8080-exec-5] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:25:24.995 [http-nio-8080-exec-5] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:25:24.997 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:25:24.997 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:25:26.471 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:25:26.472 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:EA02592F0B38387D3181D502C60883B7
+2019-08-13 10:25:26.472 [http-nio-8080-exec-4] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:25:26.473 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:25:26.473 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: 64a6sd4564a6sd8ad1(String)
+2019-08-13 10:25:26.505 [http-nio-8080-exec-4] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:25:26.507 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:25:26.507 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:34:22.313 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:34:22.313 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:EA02592F0B38387D3181D502C60883B7
+2019-08-13 10:34:22.313 [http-nio-8080-exec-9] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:34:22.317 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:34:22.317 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:EA02592F0B38387D3181D502C60883B7
+2019-08-13 10:34:22.317 [http-nio-8080-exec-10] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:34:23.567 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:34:23.568 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:34:23.600 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:34:23.601 [http-nio-8080-exec-10] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:34:23.602 [http-nio-8080-exec-10] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:34:23.604 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:34:23.604 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:34:23.629 [http-nio-8080-exec-10] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:34:23.632 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:34:23.633 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:37:27.097 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:37:27.098 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:EA02592F0B38387D3181D502C60883B7
+2019-08-13 10:37:27.098 [http-nio-8080-exec-3] INFO  org.fh.api.controller.bill.BillController - getBillById
+2019-08-13 10:37:27.133 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 10:37:27.133 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: 64a6sd4564a6sd8ad1(String)
+2019-08-13 10:37:27.163 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 10:37:27.165 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:37:27.165 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:47:10.127 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:47:10.128 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:EA02592F0B38387D3181D502C60883B7
+2019-08-13 10:47:10.128 [http-nio-8080-exec-4] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:47:10.130 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:47:10.130 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:EA02592F0B38387D3181D502C60883B7
+2019-08-13 10:47:10.130 [http-nio-8080-exec-7] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:47:10.682 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:47:10.683 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:3DBFDA6EE2FAE855BBD4DF7616C29C3E
+2019-08-13 10:47:10.685 [http-nio-8080-exec-6] INFO  org.fh.api.controller.user.UserLoginController - 081QxpZq0JIXGm1ODt1r0OzfZq0QxpZH
+2019-08-13 10:47:11.232 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:47:11.233 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:47:11.259 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:47:11.260 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:47:11.261 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:47:11.293 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:47:11.294 [http-nio-8080-exec-7] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:47:11.295 [http-nio-8080-exec-7] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:47:11.296 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:47:11.297 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:47:11.322 [http-nio-8080-exec-7] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:47:11.322 [http-nio-8080-exec-6] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:47:11.323 [http-nio-8080-exec-6] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:47:11.324 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:47:11.325 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:47:11.372 [http-nio-8080-exec-6] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:47:11.373 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:47:11.373 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:48:13.736 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:48:13.737 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:3DBFDA6EE2FAE855BBD4DF7616C29C3E
+2019-08-13 10:48:13.737 [http-nio-8080-exec-2] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:48:13.763 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:48:13.764 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:3DBFDA6EE2FAE855BBD4DF7616C29C3E
+2019-08-13 10:48:13.765 [http-nio-8080-exec-1] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:48:13.772 [http-nio-8080-exec-2] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:48:13.772 [http-nio-8080-exec-2] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:48:13.792 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:48:13.792 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:48:13.804 [http-nio-8080-exec-2] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:48:13.806 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:48:13.806 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:48:13.818 [http-nio-8080-exec-1] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:48:13.820 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:48:13.820 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:48:14.359 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:48:14.359 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:7577B19FEEF88653E0835FF1FDFC8BB2
+2019-08-13 10:48:14.360 [http-nio-8080-exec-3] INFO  org.fh.api.controller.user.UserLoginController - 061yMCWP0ZavO32O0mXP0PnYWP0yMCWh
+2019-08-13 10:48:14.635 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:48:14.635 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:48:14.659 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:48:14.659 [http-nio-8080-exec-3] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:48:14.660 [http-nio-8080-exec-3] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:48:14.706 [http-nio-8080-exec-3] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:48:14.706 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:48:14.707 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:49:15.776 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:49:15.777 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:7577B19FEEF88653E0835FF1FDFC8BB2
+2019-08-13 10:49:15.777 [http-nio-8080-exec-7] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:49:15.781 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:49:15.781 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:7577B19FEEF88653E0835FF1FDFC8BB2
+2019-08-13 10:49:15.781 [http-nio-8080-exec-6] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:49:15.805 [http-nio-8080-exec-7] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:49:15.805 [http-nio-8080-exec-7] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:49:15.812 [http-nio-8080-exec-6] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:49:15.812 [http-nio-8080-exec-6] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:49:15.831 [http-nio-8080-exec-7] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:49:15.833 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:49:15.833 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:49:15.844 [http-nio-8080-exec-6] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:49:15.846 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:49:15.846 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:49:16.273 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:49:16.274 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:75CEE960558737D10B06F26930DDC608
+2019-08-13 10:49:16.275 [http-nio-8080-exec-8] INFO  org.fh.api.controller.user.UserLoginController - 021FCPu31GJjFQ1Eclu31F6Fu31FCPuD
+2019-08-13 10:49:16.494 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:49:16.495 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:49:16.525 [http-nio-8080-exec-8] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:49:16.525 [http-nio-8080-exec-8] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:49:16.526 [http-nio-8080-exec-8] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:49:16.584 [http-nio-8080-exec-8] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:49:16.586 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:49:16.586 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:50:05.200 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:50:05.201 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:75CEE960558737D10B06F26930DDC608
+2019-08-13 10:50:05.202 [http-nio-8080-exec-10] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:50:05.202 [http-nio-8080-exec-10] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:50:05.203 [http-nio-8080-exec-10] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:50:05.211 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:50:05.212 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:75CEE960558737D10B06F26930DDC608
+2019-08-13 10:50:05.213 [http-nio-8080-exec-9] INFO  org.fh.api.controller.bill.BillController - getBillListByPayStatus
+2019-08-13 10:50:05.213 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 10:50:05.214 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:50:05.235 [http-nio-8080-exec-10] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:50:05.237 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:50:05.237 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:50:05.241 [http-nio-8080-exec-9] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 2
+2019-08-13 10:50:05.242 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:50:05.243 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 10:50:05.664 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 10:50:05.665 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:F07FD9F8D32E3E0AF2DBC31FAE6F002D
+2019-08-13 10:50:05.666 [http-nio-8080-exec-2] INFO  org.fh.api.controller.user.UserLoginController - 001TEeWQ1j333212H5UQ1eAgWQ1TEeWQ
+2019-08-13 10:50:05.899 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 10:50:05.899 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:50:05.924 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 10:50:05.925 [http-nio-8080-exec-2] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 10:50:05.925 [http-nio-8080-exec-2] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 10:50:05.974 [http-nio-8080-exec-2] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 10:50:05.975 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 10:50:05.975 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 11:13:18.874 [Thread-18] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-13 11:13:18.877 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-08-13 11:13:24.985 [restartedMain] INFO  org.fh.api.FhiApiApplication - Starting FhiApiApplication on YK219ZAO71X6ZV0 with PID 15396 (C:\Dysprep\svn\bin\svn\fh_api\target\classes started by Administrator in C:\Dysprep\svn\bin\svn\fh_api)
+2019-08-13 11:13:24.988 [restartedMain] INFO  org.fh.api.FhiApiApplication - No active profile set, falling back to default profiles: default
+2019-08-13 11:13:25.058 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-13 11:13:25.058 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-13 11:13:26.553 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-08-13 11:13:26.568 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-13 11:13:26.579 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-13 11:13:26.579 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-08-13 11:13:26.586 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2019-08-13 11:13:26.697 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-13 11:13:26.697 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1638 ms
+2019-08-13 11:13:27.405 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-13 11:13:27.731 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-08-13 11:13:27.758 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-08-13 11:13:27.787 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-13 11:13:27.790 [restartedMain] INFO  org.fh.api.FhiApiApplication - Started FhiApiApplication in 3.332 seconds (JVM running for 4.351)
+2019-08-13 11:17:29.768 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-13 15:27:01.220 [restartedMain] INFO  org.fh.api.FhiApiApplication - Starting FhiApiApplication on YK219ZAO71X6ZV0 with PID 876 (C:\Dysprep\svn\bin\svn\fh_api\target\classes started by Administrator in C:\Dysprep\svn\bin\svn\fh_api)
+2019-08-13 15:27:01.226 [restartedMain] INFO  org.fh.api.FhiApiApplication - No active profile set, falling back to default profiles: default
+2019-08-13 15:27:01.282 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-13 15:27:01.282 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-13 15:27:02.804 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-08-13 15:27:02.817 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-13 15:27:02.824 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-13 15:27:02.825 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-08-13 15:27:02.831 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2019-08-13 15:27:02.944 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-13 15:27:02.944 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1661 ms
+2019-08-13 15:27:03.665 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-13 15:27:03.989 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-08-13 15:27:04.015 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-08-13 15:27:04.039 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-13 15:27:04.042 [restartedMain] INFO  org.fh.api.FhiApiApplication - Started FhiApiApplication in 3.288 seconds (JVM running for 4.278)
+2019-08-13 17:46:08.251 [http-nio-8080-exec-4] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-13 17:46:08.252 [http-nio-8080-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-13 17:46:08.266 [http-nio-8080-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2019-08-13 17:46:08.293 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:08.293 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:08.296 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:08.296 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:08.296 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:08.297 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:08.298 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:EB46E5CD8EED7863A91775E5A4B9855F
+2019-08-13 17:46:08.298 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:C058E9582E8DA22604D4977DE12E344F
+2019-08-13 17:46:08.298 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:3FA380C1122FD355698C8F54C71E1A57
+2019-08-13 17:46:08.298 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:65AA940C76C772532043CC5842D2F9D5
+2019-08-13 17:46:08.298 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:E66952F7E70769CDBA793A4F143B211C
+2019-08-13 17:46:08.298 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:98493172CD00367DFEDCE17180A53B74
+2019-08-13 17:46:08.316 [http-nio-8080-exec-5] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-08-13 17:46:08.316 [http-nio-8080-exec-4] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-08-13 17:46:08.316 [http-nio-8080-exec-6] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-13 17:46:08.316 [http-nio-8080-exec-1] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-08-13 17:46:08.316 [http-nio-8080-exec-3] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-08-13 17:46:08.316 [http-nio-8080-exec-2] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-08-13 17:46:08.363 [http-nio-8080-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-08-13 17:46:09.009 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-08-13 17:46:09.040 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-08-13 17:46:09.106 [http-nio-8080-exec-4] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-08-13 17:46:09.107 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-08-13 17:46:09.107 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-08-13 17:46:09.128 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:09.128 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:09.133 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:09.133 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:297DCCF91C6237CE5173AB0E8E6A0EA1
+2019-08-13 17:46:09.134 [http-nio-8080-exec-4] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-13 17:46:09.139 [http-nio-8080-exec-5] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-08-13 17:46:09.140 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-13 17:46:09.141 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-08-13 17:46:09.142 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:09.143 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:09.155 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:09.156 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:104802B7471D3627CB014E9227C6062D
+2019-08-13 17:46:09.173 [http-nio-8080-exec-6] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-13 17:46:09.174 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-08-13 17:46:09.174 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-08-13 17:46:09.176 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:09.176 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:09.210 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-08-13 17:46:09.211 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-08-13 17:46:09.211 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-08-13 17:46:09.214 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:09.214 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:09.246 [http-nio-8080-exec-2] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-08-13 17:46:09.247 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-08-13 17:46:09.248 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-08-13 17:46:09.249 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:09.249 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:09.265 [http-nio-8080-exec-7] INFO  org.fh.api.controller.user.UserLoginController - 0614d6G81dReTO1sCsE81qIUF814d6GL
+2019-08-13 17:46:09.283 [http-nio-8080-exec-4] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-13 17:46:09.284 [http-nio-8080-exec-4] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-08-13 17:46:09.286 [http-nio-8080-exec-1] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-08-13 17:46:09.292 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:09.292 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:09.313 [http-nio-8080-exec-4] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-13 17:46:09.317 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:09.317 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:10.272 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 17:46:10.273 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 17:46:10.343 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 17:46:10.344 [http-nio-8080-exec-7] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 17:46:10.345 [http-nio-8080-exec-7] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 17:46:10.462 [http-nio-8080-exec-7] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 17:46:10.465 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:10.465 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:12.393 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-13 17:46:12.401 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-08-13 17:46:19.892 [restartedMain] INFO  org.fh.api.FhiApiApplication - Starting FhiApiApplication on YK219ZAO71X6ZV0 with PID 14044 (C:\Dysprep\svn\bin\svn\fh_api\target\classes started by Administrator in C:\Dysprep\svn\bin\svn\fh_api)
+2019-08-13 17:46:19.896 [restartedMain] INFO  org.fh.api.FhiApiApplication - No active profile set, falling back to default profiles: default
+2019-08-13 17:46:19.994 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-13 17:46:19.994 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-13 17:46:22.164 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-08-13 17:46:22.177 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-13 17:46:22.185 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-13 17:46:22.185 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-08-13 17:46:22.191 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;.]
+2019-08-13 17:46:22.304 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-13 17:46:22.304 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2310 ms
+2019-08-13 17:46:23.052 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-13 17:46:23.363 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-08-13 17:46:23.391 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-08-13 17:46:23.418 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-13 17:46:23.420 [restartedMain] INFO  org.fh.api.FhiApiApplication - Started FhiApiApplication in 4.063 seconds (JVM running for 5.021)
+2019-08-13 17:46:23.706 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-13 17:46:23.706 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-13 17:46:23.712 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2019-08-13 17:46:23.726 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:23.727 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:23.727 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:104802B7471D3627CB014E9227C6062D
+2019-08-13 17:46:23.729 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:1E88E813326D414310BB9E7DE1287416
+2019-08-13 17:46:23.743 [http-nio-8080-exec-1] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-13 17:46:23.799 [http-nio-8080-exec-2] INFO  org.fh.api.controller.user.UserLoginController - 021wPCXF1evTF70lC0YF1IkIXF1wPCXi
+2019-08-13 17:46:23.799 [http-nio-8080-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-08-13 17:46:24.229 [http-nio-8080-exec-1] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-13 17:46:24.251 [http-nio-8080-exec-1] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-08-13 17:46:24.296 [http-nio-8080-exec-1] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-13 17:46:24.321 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:24.322 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:24.784 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 17:46:24.785 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 17:46:24.815 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 17:46:24.816 [http-nio-8080-exec-2] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 17:46:24.816 [http-nio-8080-exec-2] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 17:46:24.875 [http-nio-8080-exec-2] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 17:46:24.880 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:24.881 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:36.407 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:36.408 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:1E88E813326D414310BB9E7DE1287416
+2019-08-13 17:46:36.408 [http-nio-8080-exec-4] INFO  o.f.a.controller.lifecircles.LifecirclesControler - getCircleKind
+2019-08-13 17:46:36.409 [http-nio-8080-exec-4] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==>  Preparing: SELECT a.LIFE_CIRCLE_ID, b.`NAME` AS LIFE_CIRCLE_TYPE, a.RECOMMENDATION, a.IMG, a.TITLE, a.CONTENT, a.BROWSE_TIMES, a.SHARE_TIMES, a.CREATE_TIME, a.BRIEF_INTRODUCTION FROM wx_applet_life_circles a LEFT JOIN sys_dictionaries b ON (a.LIFE_CIRCLE_TYPE = b.BIANMA) WHERE b.BIANMA=? 
+2019-08-13 17:46:36.409 [http-nio-8080-exec-4] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - ==> Parameters: CharacteristicService(String)
+2019-08-13 17:46:36.421 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:36.422 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:1E88E813326D414310BB9E7DE1287416
+2019-08-13 17:46:36.422 [http-nio-8080-exec-5] INFO  o.f.a.c.servicesitem.ServiceitemController - indexList
+2019-08-13 17:46:36.455 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:36.456 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:1E88E813326D414310BB9E7DE1287416
+2019-08-13 17:46:36.456 [http-nio-8080-exec-6] INFO  org.fh.api.controller.news.NewsControler - newsList
+2019-08-13 17:46:36.458 [http-nio-8080-exec-4] DEBUG o.f.a.m.l.LifecirclesMapper.getCircleKind - <==      Total: 2
+2019-08-13 17:46:36.458 [http-nio-8080-exec-5] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==>  Preparing: SELECT a.SERVICES_ID, a.SERVICE_ICON, b.`NAME` AS SERVICE_TYPE, a.ORDER_BY FROM wx_applet_services a LEFT JOIN sys_dictionaries b ON ( a.SERVICE_TYPE = b.BIANMA ) WHERE a.HOME_PAGE_DISPLAY = 'yes' ORDER BY ORDER_BY LIMIT 0,9 
+2019-08-13 17:46:36.459 [http-nio-8080-exec-5] DEBUG o.f.a.m.s.S.getIndexServiceitemList - ==> Parameters: 
+2019-08-13 17:46:36.466 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:36.466 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:36.511 [http-nio-8080-exec-5] DEBUG o.f.a.m.s.S.getIndexServiceitemList - <==      Total: 9
+2019-08-13 17:46:36.512 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==>  Preparing: SELECT NEWS_ID,NEWS_TITLE,RELEASE_DATE,BROWSE_TIMES,SHARE_TIMES,NEWS_IMG,CONTENT FROM wx_applet_news 
+2019-08-13 17:46:36.512 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - ==> Parameters: 
+2019-08-13 17:46:36.514 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:36.514 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:36.524 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:36.524 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:1E88E813326D414310BB9E7DE1287416
+2019-08-13 17:46:36.525 [http-nio-8080-exec-7] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-08-13 17:46:36.540 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:36.541 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - sessionId:1E88E813326D414310BB9E7DE1287416
+2019-08-13 17:46:36.541 [http-nio-8080-exec-8] INFO  org.fh.api.controller.coupon.CouponController - getCouponByPosition
+2019-08-13 17:46:36.549 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:36.550 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - sessionId:1E88E813326D414310BB9E7DE1287416
+2019-08-13 17:46:36.550 [http-nio-8080-exec-9] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-13 17:46:36.557 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:36.557 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - sessionId:1E88E813326D414310BB9E7DE1287416
+2019-08-13 17:46:36.557 [http-nio-8080-exec-10] INFO  org.fh.api.controller.banner.BannerControler - list
+2019-08-13 17:46:36.565 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.news.NewsMapper.getNewsList - <==      Total: 4
+2019-08-13 17:46:36.565 [http-nio-8080-exec-7] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-08-13 17:46:36.566 [http-nio-8080-exec-7] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: top(String)
+2019-08-13 17:46:36.567 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:36.567 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:36.618 [http-nio-8080-exec-7] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 4
+2019-08-13 17:46:36.619 [http-nio-8080-exec-8] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==>  Preparing: SELECT t.COUPON_ID, t.COUPON_TYPE, t.SERVICES_ID, t.COUPON_TITLE, t.COUPON_REMARK, t.DISCOUNT_LIMIT_AMT, t.DISCOUNT_AMT, t.`STATUS`, t.TOTAL_NUM, t.VALIDATE_TIME, t.EXPIRE_TIME, t.BRIEF_INTRODUCTION, t.COUPON_IMG FROM wx_applet_coupon t WHERE t.`STATUS` = 'publish' AND t.SHOW_POSITION = ? ORDER BY t.SORT_BY 
+2019-08-13 17:46:36.620 [http-nio-8080-exec-8] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - ==> Parameters: middle(String)
+2019-08-13 17:46:36.621 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:36.622 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:36.660 [http-nio-8080-exec-8] DEBUG o.f.a.m.coupon.CouponMapper.getCouponByPosition - <==      Total: 2
+2019-08-13 17:46:36.661 [http-nio-8080-exec-9] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-13 17:46:36.662 [http-nio-8080-exec-9] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_top(String)
+2019-08-13 17:46:36.663 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:36.664 [http-nio-8080-exec-8] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:36.692 [http-nio-8080-exec-9] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-13 17:46:36.693 [http-nio-8080-exec-10] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==>  Preparing: select a.BANNER_ID,a.IMG,a.LINK,b.`NAME` from wx_applet_banner a left join sys_dictionaries b on(a.POSITION = b.BIANMA) where b.BIANMA = ? ORDER BY a.ORDER_BY ; 
+2019-08-13 17:46:36.694 [http-nio-8080-exec-10] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - ==> Parameters: banner_bottom(String)
+2019-08-13 17:46:36.695 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:36.695 [http-nio-8080-exec-9] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:36.723 [http-nio-8080-exec-10] DEBUG o.fh.api.mapper.banner.BannerMapper.getBannerList - <==      Total: 2
+2019-08-13 17:46:36.726 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:36.727 [http-nio-8080-exec-10] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:36.790 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:36.791 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - sessionId:06ED37ECDA5B90825CDFC1046C5CACB5
+2019-08-13 17:46:36.792 [http-nio-8080-exec-1] INFO  org.fh.api.controller.user.UserLoginController - 071tvlKQ0KI2K628ceKQ0L1hKQ0tvlK0
+2019-08-13 17:46:36.930 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 17:46:36.931 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 17:46:36.963 [http-nio-8080-exec-1] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 17:46:36.965 [http-nio-8080-exec-1] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==>  Preparing: update WX_APPLET_MEMBER set MEMBER_ID = ?, UNION_ID = ?, NICK_NAME = ?, FULL_NAME = ?, SEX = ?, TEL = ?, COUNTRY = ?, PROVINCE = ?, CITY = ?, HEAD_IMG = ?, JI_FEN = ?, COMPANY_NAME = ?, TAX_NO = ? where OPEN_ID = ? 
+2019-08-13 17:46:36.967 [http-nio-8080-exec-1] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - ==> Parameters: 9b750107-2f3c-4822-a5c7-66dd1ed53a8a(String), null, iLytes(String), null, null, null, null, null, null, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItBJ9wLwNEqSJbrSMIoVVE1jYiaiahPC2CoQuuGGoAs4wiaSbXDjIZG8rrrr6TiaIcTtcucHjoDIJoEA/132(String), 36900(BigDecimal), null, null, ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 17:46:37.026 [http-nio-8080-exec-1] DEBUG o.f.a.m.user.UserMapper.updateUserListByOpenid - <==    Updates: 1
+2019-08-13 17:46:37.029 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:37.030 [http-nio-8080-exec-1] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:52.042 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:52.043 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:06ED37ECDA5B90825CDFC1046C5CACB5
+2019-08-13 17:46:52.047 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:52.048 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:52.050 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:52.050 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - sessionId:06ED37ECDA5B90825CDFC1046C5CACB5
+2019-08-13 17:46:52.052 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==>  Preparing: select f.MEMBER_ID, f.OPEN_ID, f.UNION_ID, f.NICK_NAME, f.FULL_NAME, f.SEX, f.TEL, f.COUNTRY, f.PROVINCE, f.CITY, f.HEAD_IMG, f.JI_FEN, f.COMPANY_NAME, f.CREATE_TIME, f.TAX_NO from WX_APPLET_MEMBER f where f.OPEN_ID = ? 
+2019-08-13 17:46:52.053 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - ==> Parameters: ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 17:46:52.083 [http-nio-8080-exec-3] DEBUG org.fh.api.mapper.user.UserMapper.getUserByOpenid - <==      Total: 1
+2019-08-13 17:46:52.085 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:52.085 [http-nio-8080-exec-3] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:53.059 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:53.060 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - sessionId:06ED37ECDA5B90825CDFC1046C5CACB5
+2019-08-13 17:46:53.062 [http-nio-8080-exec-4] INFO  org.fh.api.controller.order.OrderController - getBillListByPayStatus
+2019-08-13 17:46:53.068 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:53.068 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - sessionId:06ED37ECDA5B90825CDFC1046C5CACB5
+2019-08-13 17:46:53.068 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 17:46:53.068 [http-nio-8080-exec-5] INFO  org.fh.api.controller.order.OrderController - getBillListByPayStatus
+2019-08-13 17:46:53.068 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) where a.PAY_STATUS =? and a.OPEN_ID =? ORDER BY a.CREATE_TIME DESC 
+2019-08-13 17:46:53.068 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_01(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 17:46:53.068 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - ==> Parameters: ps_03(String), ojkCL5XY5NIqqn1SOTxaR5A1fXOw(String)
+2019-08-13 17:46:53.102 [http-nio-8080-exec-4] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 1
+2019-08-13 17:46:53.104 [http-nio-8080-exec-5] DEBUG o.f.a.m.bill.BillMapper.getBillListByPayStatus - <==      Total: 3
+2019-08-13 17:46:53.105 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:53.105 [http-nio-8080-exec-4] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:53.106 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:53.106 [http-nio-8080-exec-5] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:54.036 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:54.037 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - sessionId:06ED37ECDA5B90825CDFC1046C5CACB5
+2019-08-13 17:46:54.037 [http-nio-8080-exec-6] INFO  org.fh.api.controller.order.OrderController - getBillById
+2019-08-13 17:46:54.038 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BILL_ID = ? 
+2019-08-13 17:46:54.040 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - ==> Parameters: 54564as6d321a3s1d6354.21313(String)
+2019-08-13 17:46:54.088 [http-nio-8080-exec-6] DEBUG org.fh.api.mapper.bill.BillMapper.getBillById - <==      Total: 1
+2019-08-13 17:46:54.101 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:46:54.101 [http-nio-8080-exec-6] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:46:58.571 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:46:58.571 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - sessionId:06ED37ECDA5B90825CDFC1046C5CACB5
+2019-08-13 17:46:58.576 [http-nio-8080-exec-7] INFO  org.fh.api.controller.order.OrderController - updateBillInvoice
+2019-08-13 17:46:58.577 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.bill.BillMapper.getBillBybillNo - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BIll_NO = ? 
+2019-08-13 17:46:58.578 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.bill.BillMapper.getBillBybillNo - ==> Parameters: 20190807174178945(String)
+2019-08-13 17:46:58.609 [http-nio-8080-exec-7] DEBUG org.fh.api.mapper.bill.BillMapper.getBillBybillNo - <==      Total: 1
+2019-08-13 17:47:52.206 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.bill.BillMapper.updateBillInvoice - ==>  Preparing: UPDATE wx_applet_bill SET IS_NEED_INVOICE = ?, TITLE = ?, TAX_NO = ? WHERE BILL_ID = ? 
+2019-08-13 17:47:52.207 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.bill.BillMapper.updateBillInvoice - ==> Parameters: 是(String), 驱蚊器翁(String), 驱蚊器翁(String), null
+2019-08-13 17:47:52.265 [http-nio-8080-exec-7] DEBUG o.fh.api.mapper.bill.BillMapper.updateBillInvoice - <==    Updates: 0
+2019-08-13 17:52:23.457 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:52:23.457 [http-nio-8080-exec-7] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0
+2019-08-13 17:52:26.717 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------------开始进入请求地址拦截----------------------------
+2019-08-13 17:52:26.718 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - sessionId:06ED37ECDA5B90825CDFC1046C5CACB5
+2019-08-13 17:52:26.719 [http-nio-8080-exec-2] INFO  org.fh.api.controller.order.OrderController - updateBillInvoice
+2019-08-13 17:52:26.754 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillBybillNo - ==>  Preparing: SELECT a.BILL_ID, a.SERVICES_ID, a.OPEN_ID, a.BIll_NO, a.IS_NEED_INVOICE, a.TITLE, a.TAX_NO, a.BIll_AMOUNT, d.`NAME` as PAY_STATUS, e.`NAME` AS `STATUS`, c.`NAME` AS SERVICES_NAME, a.REMARK, a.CREATE_TIME, a.PAYMENT_TYPE FROM wx_applet_bill a LEFT JOIN wx_applet_services b ON ( a.SERVICES_ID = b.SERVICES_ID ) LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA) LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA) LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA) WHERE a.BIll_NO = ? 
+2019-08-13 17:52:26.755 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillBybillNo - ==> Parameters: 20190807174178945(String)
+2019-08-13 17:52:26.791 [http-nio-8080-exec-2] DEBUG org.fh.api.mapper.bill.BillMapper.getBillBybillNo - <==      Total: 1
+2019-08-13 17:53:03.014 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.bill.BillMapper.updateBillInvoice - ==>  Preparing: UPDATE wx_applet_bill SET IS_NEED_INVOICE = ?, TITLE = ?, TAX_NO = ? WHERE BILL_ID = ? 
+2019-08-13 17:53:03.015 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.bill.BillMapper.updateBillInvoice - ==> Parameters: 是(String), 驱蚊器翁(String), 驱蚊器翁(String), null
+2019-08-13 17:53:03.076 [Thread-16] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-13 17:53:03.080 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-08-13 17:53:03.123 [http-nio-8080-exec-2] DEBUG o.fh.api.mapper.bill.BillMapper.updateBillInvoice - <==    Updates: 0
+2019-08-13 17:53:03.124 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - --------------处理请求完成后视图渲染之前的处理操作---------------
+2019-08-13 17:53:03.125 [http-nio-8080-exec-2] INFO  org.fh.api.config.LoginInterceptor - ---------------视图渲染之后的操作-------------------------0

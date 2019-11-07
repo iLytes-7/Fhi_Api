@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.nurse.NurseMapper">
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.nurse.NurseList" >
+		<id column="P_ID" property="pid"  />
+		<result column="HEAD_IMG" property="headImg"  />
+		<result column="INTRODUCE" property="introduce"  />
+		<result column="WORK_YEARS" property="workYears"  />
+	</resultMap>
+
+	<resultMap id="PersonInfoResultMap" type="org.fh.api.pojo.nurse.NursePersonInfo" >
+		<id column="P_ID" property="pid"  />
+		<result column="HEAD_IMG" property="headImg"  />
+		<result column="VIDEO" property="video"  />
+		<result column="INTRODUCE" property="introduce"  />
+		<result column="P_NAME" property="pName"  />
+		<result column="BIRTHDAY" property="birthday"  />
+		<result column="AGE" property="age"  />
+		<result column="SEX" property="sex"  />
+		<result column="COUNTRY" property="country"  />
+		<result column="WORK_YEARS" property="workYears"  />
+	</resultMap>
+	<resultMap id="NurseEduResultMap" type="org.fh.api.pojo.nurse.NurseEdu" >
+		<id column="EDU_ID" property="eduId"  />
+		<result column="SCHOOL_NAME" property="schoolName"  />
+		<result column="EDU_TYPE" property="eduType"  />
+		<result column="BEGIN_DATE" property="beginDate"  />
+		<result column="END_DATE" property="endDate"  />
+	</resultMap>
+	<resultMap id="NurseWorkExResultMap" type="org.fh.api.pojo.nurse.NurseWorkEx" >
+		<id column="EXP_ID" property="expId"  />
+		<result column="WORK_CONTENT" property="workContent"  />
+		<result column="BEGIN_DATE" property="beginDate"  />
+		<result column="END_DATE" property="endDate"  />
+	</resultMap>
+	<resultMap id="NurseCommuResultMap" type="org.fh.api.pojo.nurse.NurseCommu" >
+		<id column="COMM_ID" property="commId"  />
+		<result column="C_NAME" property="cName"  />
+	</resultMap>
+	<resultMap id="NurseOtherSkillResultMap" type="org.fh.api.pojo.nurse.NurseOtherSkill" >
+		<id column="O_ID" property="oId"  />
+		<result column="O_NAME" property="oName"  />
+	</resultMap>
+
+	<select id="getNurseList"  resultMap="BaseResultMap">
+		SELECT P_ID,HEAD_IMG,INTRODUCE,WORK_YEARS FROM wx_applet_hometeacher_person_info
+	</select>
+
+	<select id="getNursePersonInfoId" parameterType="String" resultMap="PersonInfoResultMap">
+		SELECT
+			P_ID,
+			HEAD_IMG,
+			VIDEO,
+			INTRODUCE,
+			P_NAME,
+			BIRTHDAY,
+			AGE,
+			SEX,
+			COUNTRY,
+			WORK_YEARS
+		FROM
+			wx_applet_hometeacher_person_info
+		WHERE
+			P_ID = #{pid}
+	</select>
+
+	<select id="getNurseEdu" parameterType="String" resultMap="NurseEduResultMap">
+		SELECT
+			EDU_ID,
+			SCHOOL_NAME,
+			EDU_TYPE,
+			BEGIN_DATE,
+			END_DATE
+		FROM
+			wx_applet_hometeacher_education
+		WHERE
+			P_ID = #{pid}
+	</select>
+	<select id="getNurseWorkEx" parameterType="String" resultMap="NurseWorkExResultMap">
+		SELECT
+			EXP_ID,
+			WORK_CONTENT,
+			BEGIN_DATE,
+			END_DATE
+		FROM
+			wx_applet_hometeacher_experience
+		WHERE
+			P_ID = #{pid}
+	</select>
+	<select id="getNurseCommu" parameterType="String" resultMap="NurseCommuResultMap">
+		SELECT
+			COMM_ID,
+			C_NAME
+		FROM
+			wx_applet_hometeacher_communicate_skills
+		WHERE
+			P_ID = #{pid}
+	</select>
+	<select id="getNurseOtherSkill" parameterType="String" resultMap="NurseOtherSkillResultMap">
+		SELECT
+			O_ID,
+			O_NAME
+		FROM
+			wx_applet_hometeacher_other_skills
+		WHERE
+			P_ID = #{pid}
+	</select>
+</mapper>

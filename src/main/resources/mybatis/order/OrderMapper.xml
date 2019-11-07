@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.order.OrderMapper">
+    <!--表名 -->
+    <sql id="tableName">
+        wx_applet_order
+    </sql>
+    <resultMap id="BaseResultMap" type="org.fh.api.pojo.order.OrderList" >
+        <id column="ORDER_ID" property="orderId"  />
+        <result column="SERVICES_ID" property="serviceId"  />
+        <result column="SERVICES_NAME" property="serviceName"  />
+        <result column="SERVICE_IMG" property="serviceImg"  />
+        <result column="ORDER_NO" property="orderNo"  />
+        <result column="ORDER_AMOUNT" property="orderAmount"  />
+        <result column="PAY_STATUS" property="payStatus"  />
+        <result column="STATUS" property="status"  />
+        <result column="PAYMENT_TYPE" property="paymentType"  />
+
+    </resultMap>
+
+    <resultMap id="OrderItem" type="org.fh.api.pojo.order.OrderItem" >
+        <id column="ORDER_ID" property="orderId"  />
+        <result column="SERVICES_ID" property="servicesId"  />
+        <result column="OPEN_ID" property="openId"  />
+        <result column="ORDER_NO" property="orderNo"  />
+        <result column="IS_NEED_INVOICE" property="isNeedInvoice"  />
+        <result column="TITLE" property="title"  />
+        <result column="TAX_NO" property="taxNo"  />
+        <result column="SERVICE_IMG" property="serviceImg"  />
+        <result column="PRICE" property="price"  />
+        <result column="ORDER_AMOUNT" property="orderAmount"  />
+        <result column="ADVANCE" property="advance"  />
+        <result column="PAY_STATUS" property="payStatus"  />
+        <result column="STATUS" property="status"  />
+        <result column="SERVICES_NAME" property="servicesName"  />
+        <result column="REMARK" property="remark"  />
+        <result column="CREATE_TIME" property="createTime"  />
+        <result column="PAYMENT_TYPE" property="paymentType"  />
+    </resultMap>
+    <!-- 字段用于新增 -->
+    <sql id="Field2">
+        ORDER_ID,
+        SERVICES_ID,
+        OPEN_ID,
+        ORDER_NO,
+        ORDER_AMOUNT,
+        IS_NEED_INVOICE,
+        TITLE,
+        TAX_NO,
+        PAY_STATUS,
+        STATUS,
+        REMARK,
+        PAYMENT_TYPE
+    </sql>
+    <!-- 字段值 -->
+    <sql id="FieldValue">
+        #{orderId},
+        #{servicesId},
+        #{openId},
+        #{orderNo},
+        #{orderAmount},
+        #{isNeedInvoice},
+        #{title},
+        #{taxNo},
+        #{payStatus},
+        #{status},
+        #{remark},
+        #{paymentType}
+    </sql>
+
+    <!-- 新增-->
+    <insert id="saveOrder" parameterType="org.fh.api.pojo.order.OrderBean">
+        insert into
+        <include refid="tableName"></include>
+        (
+        <include refid="Field2"></include>
+        ) values (
+        <include refid="FieldValue"></include>
+        )
+    </insert>
+    <select id="getOrderById" parameterType="String" resultMap="OrderItem">
+        SELECT
+        a.ORDER_ID,
+        a.SERVICES_ID,
+        a.OPEN_ID,
+        a.ORDER_NO,
+        a.IS_NEED_INVOICE,
+        a.TITLE,
+        a.TAX_NO,
+        b.SERVICE_IMG,
+        b.PRICE,
+        a.ORDER_AMOUNT,
+        b.ADVANCE,
+        d.`NAME` as PAY_STATUS,
+        e.`NAME` AS `STATUS`,
+        c.`NAME` AS SERVICES_NAME,
+        a.REMARK,
+        a.CREATE_TIME,
+        a.PAYMENT_TYPE
+        FROM
+        wx_applet_order a
+        LEFT JOIN wx_applet_services b ON (
+        a.SERVICES_ID = b.SERVICES_ID
+        )
+        LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+        LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA)
+        LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA)
+        WHERE
+        a.ORDER_ID = #{param}
+    </select>
+
+    <select id="getOrderByNo" parameterType="String" resultMap="OrderItem">
+        SELECT
+        a.ORDER_ID,
+        a.SERVICES_ID,
+        a.OPEN_ID,
+        a.ORDER_NO,
+        a.IS_NEED_INVOICE,
+        a.TITLE,
+        a.TAX_NO,
+        b.SERVICE_IMG,
+        b.PRICE,
+        a.ORDER_AMOUNT,
+        b.ADVANCE,
+        d.`NAME` as PAY_STATUS,
+        e.`NAME` AS `STATUS`,
+        c.`NAME` AS SERVICES_NAME,
+        a.REMARK,
+        a.CREATE_TIME,
+        a.PAYMENT_TYPE
+        FROM
+        wx_applet_order a
+        LEFT JOIN wx_applet_services b ON (
+        a.SERVICES_ID = b.SERVICES_ID
+        )
+        LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+        LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA)
+        LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA)
+        WHERE
+        a.ORDER_NO = #{param}
+    </select>
+
+    <update id="modifyStatusByOrderNo" parameterType="String">
+        UPDATE
+            WX_APPLET_ORDER
+        SET
+            PAY_STATUS = #{payStatus},
+            STATUS = #{status}
+        WHERE
+            ORDER_NO = #{orderNo}
+
+    </update>
+
+
+    <select id="byOrderNo" parameterType="String" resultMap="OrderItem">
+        SELECT
+            a.ORDER_ID,
+            a.SERVICES_ID,
+            a.OPEN_ID,
+            a.ORDER_NO,
+            a.ORDER_AMOUNT,
+            a.IS_NEED_INVOICE,
+            a.TITLE,
+            a.TAX_NO,
+            a.PAY_STATUS,
+            a.STATUS,
+            a.REMARK,
+            a.PAYMENT_TYPE,
+            c.`NAME` AS SERVICES_NAME
+        FROM
+            WX_APPLET_ORDER a
+            LEFT JOIN wx_applet_services b ON (a.SERVICES_ID = b.SERVICES_ID)
+            LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+        WHERE ORDER_NO = #{orderNo}
+    </select>
+
+    <select id="getStatusList" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+        a.ORDER_ID,
+        a.SERVICES_ID,
+        c.`NAME` AS SERVICES_NAME,
+        b.SERVICE_IMG,
+        a.ORDER_NO,
+        a.ORDER_AMOUNT,
+        d.`NAME` as PAY_STATUS,
+        e.`NAME` as STATUS,
+        a.PAYMENT_TYPE
+        FROM
+        wx_applet_order a
+        LEFT JOIN wx_applet_services b ON (
+        a.SERVICES_ID = b.SERVICES_ID
+        )
+        LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+        LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA)
+        LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA)
+        where a.PAY_STATUS =#{param}
+        and
+        a.OPEN_ID =#{openId}
+        ORDER BY
+        a.CREATE_TIME
+        DESC
+
+    </select>
+    <select id="getOrderList" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+            a.ORDER_ID,
+            a.SERVICES_ID,
+            c.`NAME` AS SERVICES_NAME,
+            b.SERVICE_IMG,
+            a.ORDER_NO,
+            a.ORDER_AMOUNT,
+            d.`NAME` as PAY_STATUS,
+            e.`NAME` as STATUS,
+            a.PAYMENT_TYPE
+        FROM
+            wx_applet_order a
+            LEFT JOIN wx_applet_services b ON (
+            a.SERVICES_ID = b.SERVICES_ID
+            )
+        LEFT JOIN sys_dictionaries c ON (b.SERVICE_TYPE = c.BIANMA)
+        LEFT JOIN sys_dictionaries d ON (a.PAY_STATUS = d.BIANMA)
+        LEFT JOIN sys_dictionaries e ON (a.STATUS = e.BIANMA)
+        WHERE a.OPEN_ID = #{param}
+        ORDER BY
+        a.CREATE_TIME
+        DESC
+    </select>
+</mapper>

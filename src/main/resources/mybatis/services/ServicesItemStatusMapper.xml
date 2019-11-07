@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.services.ServicesItemStatusMapper">
+
+	<sql id="tableName">
+		wx_applet_service_itemstatus
+	</sql>
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.services.ServicesItemStatus" >
+		<id column="STATUS_ID" property="statusId"  />
+		<result column="ITEM_ID" property="itemId"  />
+		<result column="ORDER_NO" property="orderNo"  />
+		<result column="ITEM_NAME" property="itemName"  />
+		<result column="STATUS" property="status"  />
+		<result column="REMARK" property="remark"  />
+	</resultMap>
+
+	<sql id="insertField">
+		STATUS_ID,
+		ITEM_ID,
+		ORDER_NO,
+		STATUS
+	</sql>
+
+	<sql id="insertFieldValue">
+		#{statusId},
+		#{itemId},
+		#{orderNo},
+		#{status}
+	</sql>
+
+	<insert id="save" parameterType="org.fh.api.pojo.services.ServicesItemStatus">
+		insert into
+		<include refid="tableName"></include>
+		(
+		<include refid="insertField"></include>
+		) values (
+		<include refid="insertFieldValue"></include>
+		)
+	</insert>
+
+	<select id="byOrderNo" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+		a.STATUS_ID,
+		a.ITEM_ID,
+		a.ORDER_NO,
+		b.ITEM_NAME AS ITEM_NAME,
+		a.REMARK,
+		a.`STATUS`
+		FROM
+		wx_applet_service_itemstatus a
+		LEFT JOIN wx_applet_service_item b ON (a.ITEM_ID = b.ITEM_ID)
+		WHERE
+		a.ORDER_NO = #{orderNo}
+		ORDER BY
+		b.ORDER_BY
+	</select>
+
+	<!-- yyh-Oracles -->
+</mapper>

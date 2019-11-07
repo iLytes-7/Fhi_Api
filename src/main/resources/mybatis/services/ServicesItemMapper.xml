@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fh.api.mapper.services.ServicesItemMapper">
+	
+
+	<resultMap id="BaseResultMap" type="org.fh.api.pojo.services.ServicesItem" >
+		<id column="ITEM_ID" property="itemId"  />
+		<result column="SERVICES_ID" property="servicesId"  />
+		<result column="ITEM_NAME" property="itemName"  />
+		<result column="ORDER_BY" property="orderBy"  />
+	</resultMap>
+
+
+	<select id="byServicesId" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+			ITEM_ID,
+			SERVICES_ID,
+			ITEM_NAME,
+			ORDER_BY
+		FROM
+			wx_applet_service_item
+		WHERE
+			SERVICES_ID = #{servicesId}
+	</select>
+	<!-- yyh-Oracles -->
+</mapper>
